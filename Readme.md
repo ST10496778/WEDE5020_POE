@@ -95,7 +95,7 @@ Contact us page
 it will take 25 days for the project to be completed
 
 # 7. site map
-![alt text](image-3.png)
+![alt text](image-4.png)
 
 # 8. references 
 Reference listd, n (2022). Triangle Leaf Cross  Logo Logo Maker | Design.com. [online] Design.com. Available at: https://www.design.com/maker/logo/9d53caa1-fafb-4488-95bf-f6d996550bba/draft/bddff4da-9e5e-46bf-850c-bd5f7ea4b157?savedDraft=True [Accessed 26 Aug. 2025].
