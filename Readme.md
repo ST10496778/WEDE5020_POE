@@ -113,7 +113,13 @@ gloomaps.com, G. (2018). GlooMaps - Visual Sitemap Tool. [online] Gloomaps.com. 
 # 9. CHANGE LOG 
 ## 9.1 STRUCTURE CODE OF HTML 
 In all web pages, i have implemented structural tags header, main and footer, as adviced 
+I have added more information on the text folder within the _private folder as adviced 
+All images are in _imagges folder s adviced 
+All unneccessary folders are within the _private folder as adviced 
+
 ## 9.2 CONTENT 
 In faith_community.html I've added more content as adviced 
 Added more products on the product.html as adviced 
 Addded more content on the about_us.html page as advised 
+## 9.3 Update on proposal 
+I have editted my grant chart in order for it not to be vague, I have added very small detail based on what i was adviced 
