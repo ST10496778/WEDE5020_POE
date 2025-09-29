@@ -1,0 +1,119 @@
+:root {
+    --background: #F5F2E7;  /* soft sand */
+    --header: #6B705C;      /* olive green */
+    --footer: #3A5A40;      /* deep forest green */
+    --accent: #B36A5E;      /* terracotta */
+    --highlight: #C49A6C;   /* golden highlight */
+    --text-dark: #2C2C2C;
+    --text-light: #FAFAFA;
+  }
+  
+  /* Reset */
+  body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    background-color: var(--background);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* HEADER */
+  header {
+    background-color: var(--header);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;   /* relative padding for responsive width */
+    width: 100%;        /* full width */
+    box-sizing: border-box;
+  }
+  
+  header .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header nav a:hover {
+    color: var(--highlight);
+  }
+  
+  /* MAIN */
+  main {
+    flex: 1; /* pushes footer down */
+    text-align: center;
+    padding: 60px 5%; /* relative padding for responsiveness */
+  }
+  
+  main h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--header);
+    margin-bottom: 15px;
+  }
+  
+  main p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  button {
+    background-color: var(--accent);
+    color: var(--text-light);
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--highlight);
+  }
+  
+  /* FOOTER */
+  footer {
+   
+
+    background-color: var(--footer);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 0;          /* more breathing room */
+    width: 100%;               /* full width */
+    box-sizing: border-box;
+    font-size: 14px;
+    border-top-left-radius: 20px;   /* subtle rounded corners */
+    border-top-right-radius: 20px;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1); /* soft shadow for depth */
+  }
+  
+  footer a {
+    color: var(--highlight);
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  
+  footer a:hover {
+    color: var(--accent);
+  }
+
+ 

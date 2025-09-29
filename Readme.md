@@ -109,3 +109,11 @@ d, n (2025c). Image Resizer. [online] Imageresizer.com. Available at: https://im
 Gilbert, N. (2019). What Is KPI and How to Measure It Effectively: Definition, Examples & Templates. [online] Financesonline.com. Available at: https://financesonline.com/what-is-kpi/ [Accessed 26 Aug. 2025].
 
 gloomaps.com, G. (2018). GlooMaps - Visual Sitemap Tool. [online] Gloomaps.com. Available at: https://www.gloomaps.com/XokxtbYCkd [Accessed 27 Aug. 2025].
+
+# 9. CHANGE LOG 
+## 9.1 STRUCTURE CODE OF HTML 
+In all web pages, i have implemented structural tags header, main and footer, as adviced 
+## 9.2 CONTENT 
+In faith_community.html I've added more content as adviced 
+Added more products on the product.html as adviced 
+Addded more content on the about_us.html page as advised 
