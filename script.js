@@ -1,34 +1,11 @@
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu functionality
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mainNav = document.querySelector('header nav');
+    console.log('Website loaded successfully!');
     
-    if (mobileMenuBtn && mainNav) {
-        mobileMenuBtn.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-        });
-    }
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('header nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (mainNav.classList.contains('active')) {
-                mainNav.classList.remove('active');
-            }
-        });
-    });
-    
-    // Initialize lightbox
+    // Initialize all functionality
     initLightbox();
-    
-    // Initialize search functionality
     initSearch();
-    
-    // Initialize form validation
     initFormValidation();
-    
-    // Initialize Google Map
     initMap();
 });
 
@@ -37,8 +14,8 @@ function initLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.querySelector('.lightbox-close');
-    const lightboxPrev = document.querySelector('.lightbox-prev');
-    const lightboxNext = document.querySelector('.lightbox-next');
+    
+    if (!lightbox || !lightboxImg) return;
     
     let currentImageIndex = 0;
     let images = [];
@@ -83,6 +60,10 @@ function initLightbox() {
     if (lightboxClose) {
         lightboxClose.addEventListener('click', closeLightbox);
     }
+    
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    
     if (lightboxPrev) {
         lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
     }
@@ -91,17 +72,15 @@ function initLightbox() {
     }
     
     // Close lightbox on outside click
-    if (lightbox) {
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-    }
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
     
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
-        if (lightbox && lightbox.style.display === 'flex') {
+        if (lightbox.style.display === 'flex') {
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowLeft') navigateLightbox(-1);
             if (e.key === 'ArrowRight') navigateLightbox(1);
@@ -113,21 +92,11 @@ function initLightbox() {
 function initSearch() {
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
     
     if (searchForm && searchInput) {
         searchForm.addEventListener('submit', function(e) {
             e.preventDefault();
             performSearch(searchInput.value.trim());
-        });
-        
-        // Real-time search (optional)
-        searchInput.addEventListener('input', function() {
-            if (this.value.length > 2) {
-                performSearch(this.value.trim());
-            } else {
-                clearSearchResults();
-            }
         });
     }
 }
@@ -137,7 +106,7 @@ function performSearch(query) {
     if (!searchResults) return;
     
     if (!query) {
-        clearSearchResults();
+        searchResults.innerHTML = '<p>Please enter a search term</p>';
         return;
     }
     
@@ -145,9 +114,7 @@ function performSearch(query) {
     const results = [
         { title: 'Female Hoodie', page: 'products.html', description: 'Beautiful homemade hoodie for females' },
         { title: 'Jesus Paid It All Hoodie', page: 'products.html', description: 'Inspirational hoodie with scripture' },
-        { title: 'Our Mission', page: 'about_us.html', description: 'Learn about our mission and values' },
-        { title: 'Testimonies', page: 'faith_comunity.html', description: 'Read inspiring stories from our community' },
-        { title: 'Contact Us', page: 'contact_us.html', description: 'Get in touch with our team' }
+        { title: 'Our Mission', page: 'about_us.html', description: 'Learn about our mission and values' }
     ].filter(item => 
         item.title.toLowerCase().includes(query.toLowerCase()) ||
         item.description.toLowerCase().includes(query.toLowerCase())
@@ -178,19 +145,12 @@ function displaySearchResults(results) {
     });
 }
 
-function clearSearchResults() {
-    const searchResults = document.getElementById('search-results');
-    if (searchResults) {
-        searchResults.innerHTML = '';
-    }
-}
-
 // Google Maps functionality
 function initMap() {
     const mapContainer = document.getElementById('google-map');
     if (!mapContainer) return;
     
-    // Google Maps embed code
+    // Simple Google Maps embed
     const mapEmbed = `
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.123456789012!2d28.047305!3d-26.204103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1c1c1c1c1c%3A0x1234567890abcdef!2sJohannesburg!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" 
@@ -216,22 +176,10 @@ function initFormValidation() {
             if (!validateForm(this)) {
                 e.preventDefault();
             } else {
-                // Simulate form submission success
+                // Show success message
                 e.preventDefault();
                 showFormSuccess(this);
             }
-        });
-        
-        // Real-time validation
-        const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
-        inputs.forEach(input => {
-            input.addEventListener('blur', function() {
-                validateField(this);
-            });
-            
-            input.addEventListener('input', function() {
-                clearFieldError(this);
-            });
         });
     });
 }
@@ -241,78 +189,18 @@ function validateForm(form) {
     const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
     
     inputs.forEach(input => {
-        if (!validateField(input)) {
+        if (!input.value.trim()) {
             isValid = false;
+            input.style.borderColor = '#dc3545';
+        } else {
+            input.style.borderColor = '#ddd';
         }
     });
     
     return isValid;
 }
 
-function validateField(field) {
-    const value = field.value.trim();
-    let isValid = true;
-    let errorMessage = '';
-    
-    // Clear previous error
-    clearFieldError(field);
-    
-    // Required field validation
-    if (field.hasAttribute('required') && !value) {
-        isValid = false;
-        errorMessage = 'This field is required';
-    }
-    
-    // Email validation
-    if (field.type === 'email' && value) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value)) {
-            isValid = false;
-            errorMessage = 'Please enter a valid email address';
-        }
-    }
-    
-    // Phone validation
-    if (field.type === 'tel' && value) {
-        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-        if (!phoneRegex.test(value.replace(/[\s\-\(\)]/g, ''))) {
-            isValid = false;
-            errorMessage = 'Please enter a valid phone number';
-        }
-    }
-    
-    if (!isValid) {
-        showFieldError(field, errorMessage);
-    }
-    
-    return isValid;
-}
-
-function showFieldError(field, message) {
-    field.style.borderColor = '#dc3545';
-    
-    let errorElement = field.parentNode.querySelector('.error');
-    if (!errorElement) {
-        errorElement = document.createElement('div');
-        errorElement.className = 'error';
-        field.parentNode.appendChild(errorElement);
-    }
-    
-    errorElement.textContent = message;
-    errorElement.style.display = 'block';
-}
-
-function clearFieldError(field) {
-    field.style.borderColor = '#ddd';
-    
-    const errorElement = field.parentNode.querySelector('.error');
-    if (errorElement) {
-        errorElement.style.display = 'none';
-    }
-}
-
 function showFormSuccess(form) {
-    // Show success message
     const successMessage = document.createElement('div');
     successMessage.style.cssText = `
         background: #d4edda;
@@ -333,29 +221,42 @@ function showFormSuccess(form) {
     }, 5000);
 }
 
-// Testimonial slider functionality
-function initTestimonialSlider() {
-    const testimonials = document.querySelectorAll('.testimonial-card');
-    let currentTestimonial = 0;
+// Shopping cart functionality
+let cart = [];
+
+function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    updateCartDisplay();
+    alert(`${productName} added to cart!`);
+}
+
+function updateCartDisplay() {
+    const cartElement = document.getElementById('cart-items');
+    if (!cartElement) return;
     
-    if (testimonials.length > 1) {
-        // Hide all testimonials except first
-        testimonials.forEach((testimonial, index) => {
-            if (index !== 0) {
-                testimonial.style.display = 'none';
-            }
+    if (cart.length === 0) {
+        cartElement.innerHTML = '<p>Your cart is empty</p>';
+    } else {
+        let total = 0;
+        let cartHTML = '<ul>';
+        cart.forEach(item => {
+            cartHTML += `<li>${item.name} - R${item.price}</li>`;
+            total += item.price;
         });
-        
-        // Auto-rotate testimonials
-        setInterval(() => {
-            testimonials[currentTestimonial].style.display = 'none';
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            testimonials[currentTestimonial].style.display = 'block';
-        }, 5000);
+        cartHTML += `</ul><p><strong>Total: R${total}</strong></p>`;
+        cartElement.innerHTML = cartHTML;
     }
 }
 
-// Initialize testimonial slider if on faith community page
-if (window.location.pathname.includes('faith_comunity.html')) {
-    document.addEventListener('DOMContentLoaded', initTestimonialSlider);
+function clearCart() {
+    cart = [];
+    updateCartDisplay();
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+    alert('Proceeding to checkout... This would redirect to payment in a real implementation.');
 }

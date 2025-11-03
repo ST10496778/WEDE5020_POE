@@ -60,12 +60,7 @@ header nav a:link {
     border-radius: 4px;
 }
 
-header nav a:visited {
-    color: var(--text-light);
-}
-
-header nav a:hover,
-header nav a:focus {
+header nav a:hover {
     color: var(--highlight);
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
@@ -131,7 +126,7 @@ button, .btn {
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background 0.3s;
     text-decoration: none;
     display: inline-block;
     margin: 10px 5px;
@@ -412,8 +407,7 @@ footer nav ul {
     margin: 20px 0;
 }
 
-footer nav a:link,
-footer nav a:visited {
+footer nav a {
     color: var(--highlight);
     text-decoration: none;
     transition: color 0.3s;
@@ -486,12 +480,9 @@ footer nav a:active {
         font-size: 1.75rem;
     }
     
-    main h3 {
-        font-size: 1.25rem;
-    }
-    
-    main p {
-        font-size: 1rem;
+    footer nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
