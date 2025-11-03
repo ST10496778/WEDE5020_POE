@@ -10,77 +10,163 @@
 </head>
 <body>
     <header>
-        <img src="_images/Screenshot 2025-11-03 112620.png" alt="logo">
-        <div class="logo">The Chosen Path</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="faith_comunity.html">Faith & Community</a></li>
-                <li><a href="">Contact Us</a>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="_images/Screenshot 2025-08-26 092949.png" alt="The Chosen Path Logo" class="logo">
+                <div class="brand-name">The Chosen Path</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="faith_comunity.html">Faith & Community</a></li>
+                    <li><a href="">Contact Us</a>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Get In Touch</h1>
-        <p class="subtitle">We'd Love to Hear From You - Let's Connect in Faith</p>
-
-        <!-- Contact Header -->
-        <section class="contact-header">
-            <div class="contact-intro">
-                <h2>How Can We Help You Today?</h2>
-                <p>Whether you have questions about our products, need support with an order, want to share a testimony, or are interested in partnering with us, we're here to serve you with love and excellence.</p>
-            </div>
-        </section>
-
-        <!-- Quick Contact Options -->
-        <section class="quick-contact">
-            <h2>Quick Contact Options</h2>
-            <div class="contact-options-grid">
-                <div class="contact-option-card">
-                    
-                    <h3>Email Us</h3>
-                    <p>For general inquiries and customer support</p>
-                    <a href="mailto:info@chosenpath.co.za" class="btn btn-outline">Send Email</a>
-                </div>
-                
-                <div class="contact-option-card">
-                    <p>Speak directly with our team</p>
-                    <a href="tel:+27111234567" class="btn btn-outline">Call Now</a>
-                </div>
-                
-                <div class="contact-option-card">
-                    <h3>Live Chat</h3>
-                    <p>Get instant help during business hours</p>
-                    <button class="btn btn-outline" onclick="openLiveChat()">Start Chat</button>
-                </div>
-                
-                <div class="contact-option-card">
-                    <h3>Prayer Request</h3>
-                    <p>Share your prayer needs with our community</p>
-                    <a href="faith_comunity.html#prayer" class="btn btn-outline">Request Prayer</a>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="hero-content">
+                <h1>Let's Connect in Faith</h1>
+                <p class="hero-subtitle">We're here to listen, support, and walk with you on your journey. Your message matters to us.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">Average Response Time</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Customer Satisfaction Rate</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Prayers Shared This Month</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Main Contact Section -->
+        <!-- Contact Cards Grid -->
+        <section class="contact-cards-section">
+            <h2>How Can We Help You Today?</h2>
+            <p class="section-intro">Choose the option that best fits your needs - we're here to serve you with excellence and compassion</p>
+            
+            <div class="contact-cards-grid">
+                <div class="contact-card">
+                    <div class="card-header">
+                        <h3>General Inquiries</h3>
+                        <span class="card-badge">Quick Response</span>
+                    </div>
+                    <p>Questions about our products, mission, or general information about The Chosen Path community</p>
+                    <div class="response-info">
+                        <strong>Response Time:</strong> Within 4 hours during business days
+                    </div>
+                    <div class="card-actions">
+                        <a href="mailto:info@chosenpath.co.za" class="btn btn-primary">Send Email</a>
+                        <span class="contact-email">info@chosenpath.co.za</span>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-header">
+                        <h3>Order Support</h3>
+                        <span class="card-badge badge-urgent">Priority Support</span>
+                    </div>
+                    <p>Need help with an existing order, returns, shipping questions, or product issues</p>
+                    <div class="response-info">
+                        <strong>Response Time:</strong> Within 2 hours during business hours
+                    </div>
+                    <div class="card-actions">
+                        <a href="mailto:support@chosenpath.co.za" class="btn btn-primary">Get Help Now</a>
+                        <span class="contact-email">support@chosenpath.co.za</span>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-header">
+                        <h3>Wholesale & Partnerships</h3>
+                        <span class="card-badge">Business</span>
+                    </div>
+                    <p>Interested in carrying our products in your store or exploring collaboration opportunities</p>
+                    <div class="response-info">
+                        <strong>Response Time:</strong> Within 24 hours with detailed information
+                    </div>
+                    <div class="card-actions">
+                        <a href="mailto:wholesale@chosenpath.co.za" class="btn btn-primary">Start Partnership</a>
+                        <span class="contact-email">wholesale@chosenpath.co.za</span>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-header">
+                        <h3>Prayer Requests</h3>
+                        <span class="card-badge badge-prayer">Spiritual Support</span>
+                    </div>
+                    <p>Share your prayer needs with our caring community. All requests are treated with confidentiality and love</p>
+                    <div class="response-info">
+                        <strong>Response Time:</strong> Added to prayer chain immediately
+                    </div>
+                    <div class="card-actions">
+                        <a href="#prayer-form" class="btn btn-primary">Share Your Request</a>
+                        <span class="contact-note">Completely confidential</span>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-header">
+                        <h3>Community & Events</h3>
+                        <span class="card-badge">Connection</span>
+                    </div>
+                    <p>Questions about upcoming events, community groups, or how to get involved in our ministries</p>
+                    <div class="response-info">
+                        <strong>Response Time:</strong> Within 6 hours with event details
+                    </div>
+                    <div class="card-actions">
+                        <a href="faith_comunity.html" class="btn btn-primary">View Community</a>
+                        <span class="contact-note">Join our next gathering</span>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-header">
+                        <h3>Feedback & Testimonials</h3>
+                        <span class="card-badge">Share Your Story</span>
+                    </div>
+                    <p>Share your experience with The Chosen Path or provide feedback to help us improve</p>
+                    <div class="response-info">
+                        <strong>Response Time:</strong> Personal thank you within 24 hours
+                    </div>
+                    <div class="card-actions">
+                        <a href="#main-form" class="btn btn-primary">Share Feedback</a>
+                        <span class="contact-note">We value your voice</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="main-contact-section">
             <div class="contact-container">
                 <!-- Contact Form -->
-                <div class="contact-form-section">
-                    <h2>Send Us a Message</h2>
+                <div class="contact-form-section" id="main-form">
+                    <div class="form-header">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                    </div>
+                    
                     <form id="contact-form" class="enhanced-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
                                 <div class="error-message"></div>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                                 <div class="error-message"></div>
                             </div>
                         </div>
@@ -89,13 +175,13 @@
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone" placeholder="+27 11 123 4567">
-                                <div class="error-message"></div>
+                                <div class="field-note">Optional - for urgent matters</div>
                             </div>
                             <div class="form-group">
                                 <label for="subject">Inquiry Type *</label>
                                 <select id="subject" name="subject" required>
-                                    <option value="">Select an option</option>
-                                    <option value="general">General Inquiry</option>
+                                    <option value="">What can we help you with?</option>
+                                    <option value="general">General Information</option>
                                     <option value="product">Product Question</option>
                                     <option value="order">Order Support</option>
                                     <option value="wholesale">Wholesale Inquiry</option>
@@ -103,6 +189,8 @@
                                     <option value="testimony">Share Testimony</option>
                                     <option value="prayer">Prayer Request</option>
                                     <option value="feedback">Feedback & Suggestions</option>
+                                    <option value="event">Event Information</option>
+                                    <option value="other">Other</option>
                                 </select>
                                 <div class="error-message"></div>
                             </div>
@@ -111,39 +199,45 @@
                         <div class="form-group">
                             <label for="order-number">Order Number (if applicable)</label>
                             <input type="text" id="order-number" name="order-number" placeholder="e.g., CP-2024-001">
+                            <div class="field-note">Find this in your order confirmation email</div>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" rows="6" required placeholder="Please share your message, prayer request, or testimony in detail..."></textarea>
-                            <div class="error-message"></div>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please share your message, prayer request, or testimony in detail. We're here to listen..."></textarea>
                             <div class="char-count">
                                 <span id="char-counter">0</span>/500 characters
                             </div>
+                            <div class="error-message"></div>
                         </div>
 
                         <div class="form-group checkbox-group">
                             <input type="checkbox" id="newsletter" name="newsletter" checked>
-                            <label for="newsletter">Yes, I'd like to receive updates about new products, events, and devotionals</label>
+                            <label for="newsletter">Yes, I'd like to receive updates about new products, community events, and weekly devotionals</label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="prayer-chain" name="prayer-chain">
+                            <label for="prayer-chain">Add my prayer request to the community prayer chain (if applicable)</label>
                         </div>
 
                         <div class="form-actions">
                             <button type="submit" class="btn btn-primary btn-large">
                                 <span class="btn-text">Send Message</span>
-                                <span class="btn-loading" style="display: none;">Sending...</span>
+                                <span class="btn-loading">Sending your message...</span>
                             </button>
                             <button type="reset" class="btn btn-secondary">Clear Form</button>
                         </div>
                     </form>
                 </div>
 
-                <!-- Contact Information -->
-                <div class="contact-info-section">
-                    <div class="contact-info-card">
-                        <h2>Contact Information</h2>
+                <!-- Contact Information Sidebar -->
+                <div class="contact-info-sidebar">
+                    <div class="info-card">
+                        <h3>Contact Information</h3>
                         
                         <div class="info-group">
-                            <h3> Email Addresses</h3>
+                            <h4>Email Addresses</h4>
                             <div class="info-item">
                                 <strong>General Inquiries:</strong>
                                 <a href="mailto:info@chosenpath.co.za">info@chosenpath.co.za</a>
@@ -159,7 +253,7 @@
                         </div>
 
                         <div class="info-group">
-                            <h3>Phone Numbers</h3>
+                            <h4>Phone Numbers</h4>
                             <div class="info-item">
                                 <strong>Customer Service:</strong>
                                 <a href="tel:+27111234567">+27 11 123 4567</a>
@@ -168,54 +262,59 @@
                                 <strong>WhatsApp Business:</strong>
                                 <a href="https://wa.me/27111234567">+27 11 123 4567</a>
                             </div>
+                            <div class="info-item">
+                                <strong>Emergency Support:</strong>
+                                <a href="tel:+27831234567">+27 83 123 4567</a>
+                            </div>
                         </div>
 
                         <div class="info-group">
-                            <h3> Business Hours</h3>
+                            <h4>Business Hours</h4>
                             <div class="business-hours">
                                 <div class="hour-item">
-                                    <span>Monday - Friday</span>
-                                    <span>9:00 AM - 5:00 PM</span>
+                                    <span>Monday - Thursday</span>
+                                    <span>8:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span>Friday</span>
+                                    <span>8:00 AM - 4:00 PM</span>
                                 </div>
                                 <div class="hour-item">
                                     <span>Saturday</span>
-                                    <span>10:00 AM - 2:00 PM</span>
-                                </div>
-                                <div class="hour-item">
-                                    <span>Sunday</span>
-                                    <span>Closed</span>
+                                    <span>9:00 AM - 1:00 PM</span>
                                 </div>
                                 <div class="hour-item highlight">
-                                    <span>Emergency Support</span>
+                                    <span>Prayer Requests</span>
                                     <span>24/7 via Email</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="info-group">
-                            <h3> Visit Us</h3>
+                            <h4>Visit Our Office</h4>
                             <div class="info-item">
-                                <strong>Main Office:</strong>
-                                <p>15 Aniston Place<br>Johannesburg, 2188<br>South Africa</p>
+                                <strong>Main Office Address:</strong>
+                                <p>123 Faith Street<br>Johannesburg Central<br>Johannesburg, 2000<br>South Africa</p>
                             </div>
+                            <button class="btn btn-outline" onclick="getDirections()">Get Directions</button>
                         </div>
+                    </div>
 
-                        <!-- Social Media -->
-                        <div class="social-links">
-                            <h3>Follow Our Journey</h3>
-                            <div class="social-grid">
-                                <a href="#" class="social-link" aria-label="Instagram">
-                                    <span> Instagram</span>
-                                </a>
-                                <a href="#" class="social-link" aria-label="Facebook">
-                                    <span> Facebook</span>
-                                </a>
-                                <a href="#" class="social-link" aria-label="TikTok">
-                                    <span> TikTok</span>
-                                </a>
-                                <a href="#" class="social-link" aria-label="YouTube">
-                                    <span> YouTube</span>
-                                </a>
+                    <!-- Team Availability -->
+                    <div class="availability-card">
+                        <h4>Team Availability</h4>
+                        <div class="availability-status">
+                            <div class="status-item online">
+                                <span class="status-dot"></span>
+                                <span>Customer Support: Online</span>
+                            </div>
+                            <div class="status-item online">
+                                <span class="status-dot"></span>
+                                <span>Prayer Team: Available</span>
+                            </div>
+                            <div class="status-item offline">
+                                <span class="status-dot"></span>
+                                <span>Community Manager: Back at 2 PM</span>
                             </div>
                         </div>
                     </div>
@@ -223,22 +322,77 @@
             </div>
         </section>
 
-        <!-- Map & Location Section -->
+        <!-- Prayer Request Section -->
+        <section class="prayer-section" id="prayer-form">
+            <div class="prayer-container">
+                <div class="prayer-header">
+                    <h2>Prayer Request</h2>
+                    <p>Share your prayer needs with our community. All requests are treated with love, confidentiality, and immediate attention.</p>
+                </div>
+                
+                <div class="prayer-form-card">
+                    <form id="prayer-request-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prayer-name">Your Name (Optional)</label>
+                                <input type="text" id="prayer-name" name="name" placeholder="You can remain anonymous">
+                            </div>
+                            <div class="form-group">
+                                <label for="prayer-email">Email (Optional)</label>
+                                <input type="email" id="prayer-email" name="email" placeholder="For follow-up if needed">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prayer-request">Prayer Request *</label>
+                            <textarea id="prayer-request" name="prayer" required rows="5" placeholder="Share your prayer need here. Our community will lift this up in prayer..."></textarea>
+                            <div class="char-count">
+                                <span id="prayer-char-counter">0</span>/1000 characters
+                            </div>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="urgent-prayer" name="urgent-prayer">
+                            <label for="urgent-prayer">This is an urgent prayer need</label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="share-community" name="share-community" checked>
+                            <label for="share-community">Share with prayer community (anonymous)</label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Submit Prayer Request</button>
+                            <div class="prayer-note">Your request will be added to our prayer chain within the hour</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map & Locations Section -->
         <section class="map-section">
             <div class="map-header">
                 <h2>Find Us</h2>
                 <p>Visit our main office or connect with our regional representatives across South Africa</p>
             </div>
+            
             <div class="map-container">
                 <div id="google-map" class="google-map">
-                    <!-- Google Maps embed will be loaded here -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.2493644902365!2d27.967868909541018!3d-26.02539575661768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95766215d13b37%3A0xd50e033e1dec0d76!2s15%20Arniston%20Pl%2C%20Bloubosrand%2C%20Randburg%2C%202188!5e0!3m2!1sen!2sza!4v1762183101590!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
                 </div>
             </div>
-            <div class="location-details">
+            
+            <div class="location-cards">
                 <div class="location-card">
-                    <h3>Johannesburg Office</h3>
-                    <p>15 Aniston place , Johannesburg, 2188</p>
-                    <p><strong>Hours:</strong> Mon-Fri 9AM-5PM, Sat 10AM-2PM</p>
+                    <h3>Johannesburg Main Office</h3>
+                    <p>15 Aniston place , Johannesburg North, Johannesburg, 2188</p>
+                    <div class="location-details">
+                        <div><strong>Hours:</strong> Mon-Thu 8AM-5PM, Fri 8AM-4PM, Sat 9AM-1PM</div>
+                        <div><strong>Phone:</strong> +27 11 123 4567</div>
+                        <div><strong>Email:</strong> johannesburg@chosenpath.co.za</div>
+                    </div>
                     <button class="btn btn-outline" onclick="getDirections()">Get Directions</button>
                 </div>
             </div>
@@ -247,48 +401,88 @@
         <!-- Regional Contacts -->
         <section class="regional-contacts">
             <h2>Regional Contacts</h2>
+            <p class="section-intro">Connect with our team members across South Africa</p>
+            
             <div class="regional-grid">
                 <div class="regional-card">
-                    <h3>Cape Town</h3>
-                    <p>Regional Representative: Sarah Johnson</p>
-                    <a href="mailto:capetown@chosenpath.co.za">capetown@chosenpath.co.za</a>
-                    <a href="tel:+27211234567">+27 21 123 4567</a>
+                    <h3>Cape Town Region</h3>
+                    <div class="regional-contact">
+                        <strong>Regional Representative:</strong> Sarah Johnson
+                    </div>
+                    <div class="contact-details">
+                        <a href="mailto:capetown@chosenpath.co.za">capetown@chosenpath.co.za</a>
+                        <a href="tel:+27211234567">+27 21 123 4567</a>
+                    </div>
+                    <div class="region-coverage">Western Cape • Northern Cape</div>
                 </div>
+                
                 <div class="regional-card">
-                    <h3>Durban</h3>
-                    <p>Regional Representative: Mike Naidoo</p>
-                    <a href="mailto:durban@chosenpath.co.za">durban@chosenpath.co.za</a>
-                    <a href="tel:+27311234567">+27 31 123 4567</a>
+                    <h3>Durban Region</h3>
+                    <div class="regional-contact">
+                        <strong>Regional Representative:</strong> Mike Naidoo
+                    </div>
+                    <div class="contact-details">
+                        <a href="mailto:durban@chosenpath.co.za">durban@chosenpath.co.za</a>
+                        <a href="tel:+27311234567">+27 31 123 4567</a>
+                    </div>
+                    <div class="region-coverage">KwaZulu-Natal • Eastern Cape</div>
                 </div>
+                
                 <div class="regional-card">
-                    <h3>Pretoria</h3>
-                    <p>Regional Representative: James Botha</p>
-                    <a href="mailto:pretoria@chosenpath.co.za">pretoria@chosenpath.co.za</a>
-                    <a href="tel:+27129876543">+27 12 987 6543</a>
+                    <h3>Pretoria Region</h3>
+                    <div class="regional-contact">
+                        <strong>Regional Representative:</strong> James Botha
+                    </div>
+                    <div class="contact-details">
+                        <a href="mailto:pretoria@chosenpath.co.za">pretoria@chosenpath.co.za</a>
+                        <a href="tel:+27129876543">+27 12 987 6543</a>
+                    </div>
+                    <div class="region-coverage">Gauteng • Mpumalanga • Limpopo</div>
                 </div>
             </div>
         </section>
 
-        <!-- Response Time Info -->
-        <section class="response-info">
-            <div class="response-card">
-                <h2>What to Expect After Contacting Us</h2>
-                <div class="response-timeline">
-                    <div class="response-item">
-                        <div class="response-time">Within 1 Hour</div>
-                        <div class="response-detail">Auto-confirmation email sent</div>
+        <!-- Response Timeline -->
+        <section class="response-timeline-section">
+            <div class="timeline-container">
+                <h2>What Happens After You Contact Us</h2>
+                <p class="section-intro">Transparent process from your message to our response</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Immediate Confirmation</h3>
+                            <div class="timeline-time">Within 5 minutes</div>
+                            <p>Auto-confirmation email sent with tracking number and expected response time</p>
+                        </div>
                     </div>
-                    <div class="response-item">
-                        <div class="response-time">Within 4 Hours</div>
-                        <div class="response-detail">Initial response during business hours</div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Initial Response</h3>
+                            <div class="timeline-time">Within 4 hours</div>
+                            <p>Personalized acknowledgment from our team during business hours</p>
+                        </div>
                     </div>
-                    <div class="response-item">
-                        <div class="response-time">Within 24 Hours</div>
-                        <div class="response-detail">Detailed follow-up for complex inquiries</div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Detailed Follow-up</h3>
+                            <div class="timeline-time">Within 24 hours</div>
+                            <p>Comprehensive response addressing all your questions and needs</p>
+                        </div>
                     </div>
-                    <div class="response-item">
-                        <div class="response-time">Within 3 Days</div>
-                        <div class="response-detail">Resolution for most customer service issues</div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Resolution & Support</h3>
+                            <div class="timeline-time">Within 3 days</div>
+                            <p>Complete resolution for most inquiries with ongoing support if needed</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -298,114 +492,152 @@
         <section class="emergency-contact">
             <div class="emergency-card">
                 <div class="emergency-content">
-                    <h3>Need Urgent Help?</h3>
-                    <p>For order emergencies or time-sensitive issues, call our priority support line</p>
-                    <a href="tel:+27831234567" class="btn btn-emergency"> Call Emergency Support: +27 83 123 4567</a>
+                    <h3>Need Urgent Assistance?</h3>
+                    <p>For order emergencies, time-sensitive prayer requests, or urgent matters requiring immediate attention</p>
+                    <div class="emergency-contacts">
+                        <a href="tel:+27831234567" class="btn btn-emergency">Call Emergency Support: +27 83 123 4567</a>
+                        <a href="mailto:urgent@chosenpath.co.za" class="emergency-email">urgent@chosenpath.co.za</a>
+                    </div>
+                    <div class="emergency-note">Available 24/7 for genuine emergencies</div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 The Chosen Path</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="faith_comunity.html">Faith & Community</a></li>
-                <li><a href="">Contact Us</a>
-            </ul>
-        </nav>
+    <footer class="footer-enhanced">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <div class="logo-container">
+                    <img src="_images/logo.png" alt="The Chosen Path Logo" class="logo">
+                    <div class="brand-name">The Chosen Path</div>
+                </div>
+                <p>Wear Your Faith, Walk Your Path</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="faith_comunity.html">Faith & Community</a></li>
+                    <li><a href="">Contact Us</a>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="contact_us.html">Customer Service</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="shipping.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns & Exchanges</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@chosenpath.co.za</p>
+                <p>Phone: +27 11 123 4567</p>
+                <p>Johannesburg, South Africa</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Chosen Path. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="enhanced.js"></script>
     <script>
-        // Character counter for message field
-        const messageField = document.getElementById('message');
-        const charCounter = document.getElementById('char-counter');
-
-        messageField.addEventListener('input', function() {
-            const length = this.value.length;
-            charCounter.textContent = length;
-            
-            if (length > 500) {
-                charCounter.style.color = 'red';
-            } else if (length > 400) {
-                charCounter.style.color = 'orange';
-            } else {
-                charCounter.style.color = 'green';
-            }
-        });
-
-        // Enhanced form submission
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitBtn = this.querySelector('.btn-primary');
-            const btnText = submitBtn.querySelector('.btn-text');
-            const btnLoading = submitBtn.querySelector('.btn-loading');
-            
-            // Show loading state
-            btnText.style.display = 'none';
-            btnLoading.style.display = 'inline';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission
-            setTimeout(() => {
-                // Show success message
-                showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
-                
-                // Reset form
-                this.reset();
-                charCounter.textContent = '0';
-                charCounter.style.color = 'green';
-                
-                // Reset button
-                btnText.style.display = 'inline';
-                btnLoading.style.display = 'none';
-                submitBtn.disabled = false;
-            }, 2000);
-        });
-
-        function showNotification(message, type) {
-            const notification = document.createElement('div');
-            notification.className = `notification ${type}`;
-            notification.innerHTML = `
-                <div class="notification-content">
-                    <span class="notification-icon">${type === 'success' ? '✅' : '⚠️'}</span>
-                    <span>${message}</span>
-                    <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
-                </div>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            // Auto-remove after 5 seconds
-            setTimeout(() => {
-                if (notification.parentElement) {
-                    notification.remove();
-                }
-            }, 5000);
-        }
-
-        function openLiveChat() {
-            showNotification('Live chat is available during business hours. Please call or email for immediate assistance.', 'info');
-        }
-
-        function getDirections() {
-            window.open('https://maps.google.com?q=123+Faith+Street+Johannesburg+2000+South+Africa', '_blank');
-        }
-
-        // Initialize map
+        // Enhanced Contact Page JavaScript
         document.addEventListener('DOMContentLoaded', function() {
+            // Character counters
+            const messageField = document.getElementById('message');
+            const charCounter = document.getElementById('char-counter');
+            const prayerField = document.getElementById('prayer-request');
+            const prayerCharCounter = document.getElementById('prayer-char-counter');
+
+            function setupCharCounter(field, counter) {
+                field.addEventListener('input', function() {
+                    const length = this.value.length;
+                    counter.textContent = length;
+                    
+                    if (length > (field.id === 'prayer-request' ? 1000 : 500)) {
+                        counter.style.color = 'var(--rust)';
+                        counter.style.fontWeight = 'bold';
+                    } else if (length > (field.id === 'prayer-request' ? 800 : 400)) {
+                        counter.style.color = 'var(--clay)';
+                    } else {
+                        counter.style.color = 'var(--taupe)';
+                    }
+                });
+            }
+
+            setupCharCounter(messageField, charCounter);
+            setupCharCounter(prayerField, prayerCharCounter);
+
+            // Form submission with enhanced feedback
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = this.querySelector('.btn-primary');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const btnLoading = submitBtn.querySelector('.btn-loading');
+                
+                // Show loading state
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
+                    
+                    // Reset form
+                    this.reset();
+                    charCounter.textContent = '0';
+                    charCounter.style.color = 'var(--taupe)';
+                    
+                    // Reset button
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                    submitBtn.disabled = false;
+                }, 2000);
+            });
+
+            // Prayer form submission
+            document.getElementById('prayer-request-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                showNotification('Your prayer request has been received and will be added to our prayer chain. Our community is praying with you.', 'success');
+                this.reset();
+                prayerCharCounter.textContent = '0';
+                prayerCharCounter.style.color = 'var(--taupe)';
+            });
+
+            // Initialize map
             const mapContainer = document.getElementById('google-map');
             if (mapContainer) {
                 mapContainer.innerHTML = `
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.2493644902365!2d27.967868909541018!3d-26.02539575661768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95766215d13b37%3A0xd50e033e1dec0d76!2s15%20Arniston%20Pl%2C%20Bloubosrand%2C%20Randburg%2C%202188!5e0!3m2!1sen!2sza!4v1762183101590!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.2493644902365!2d27.967868909541018!3d-26.02539575661768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95766215d13b37%3A0xd50e033e1dec0d76!2s15%20Arniston%20Pl%2C%20Bloubosrand%2C%20Randburg%2C%202188!5e0!3m2!1sen!2sza!4v1762183101590!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
                 `;
             }
         });
+
+        function getDirections() {
+            window.open('https://www.google.com/maps/place/15+Arniston+Pl,+Bloubosrand,+Randburg,+2188/@-26.0253958,27.9678689,17z/data=!3m1!4b1!4m6!3m5!1s0x1e95766215d13b37:0xd50e033e1dec0d76!8m2!3d-26.0254006!4d27.9704492!16s%2Fg%2F11jskzbjs6?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D', '_blank');
+        }
+
+        function showNotification(message, type) {
+            if (window.showNotification) {
+                window.showNotification(message, type);
+            } else {
+                alert(message);
+            }
+        }
     </script>
 </body>
 </html>
