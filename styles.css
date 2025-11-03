@@ -19,6 +19,8 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: var(--background);
     color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -29,6 +31,7 @@ body {
 header {
     background-color: var(--header);
     color: var(--text-light);
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,6 +56,13 @@ header nav ul {
 /* Pseudo-classes */
 header nav a:link {
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+/* Pseudo-classes for links */
+nav a:link {
     color: var(--text-light);
     font-weight: bold;
     transition: all 0.3s;
@@ -172,7 +182,7 @@ button:active, .btn:active {
     margin-bottom: 15px;
 }
 
-/* Form Styles */
+/* Forms */
 .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -328,7 +338,7 @@ button:active, .btn:active {
 .search-box {
     display: flex;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 
 .search-box input {
@@ -511,6 +521,12 @@ footer nav a:active {
         font-size: 1.5rem;
     }
     
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
     .search-box {
         flex-direction: column;
     }

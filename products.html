@@ -3,87 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product page</title>
+    <title>Products - The Chosen Path</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-    <img src="_images/Screenshot 2025-08-26 092949.png" alt="Chosen Path Logo">
+        <div class="logo">The Chosen Path</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About us</a></li>
-                <li><a href= ""> Products and services</a>
-                <li><a href="faith_comunity.html">Faith and community</a></li>  
-                <li><a href="contact_us.html">contact us</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="">Products</a>
+                <li><a href="faith_comunity.html">Faith & Community</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Welcome to our products page </h1>
-            <img src="_images/Christian women's hoodie, aesthetic hoodie, bible verse hoodie, black hoodie fit inspo.jpg" alt="">
-            <p>homemade hoodie for females </p>
-            <p><strong>R250</strong></p> 
-            <nav>
-                <ul>
-                    <li><a href="hoodie_female.html">view more</a></li>
+        <h1>Our Products</h1>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="_images/Christian women's hoodie, aesthetic hoodie, bible verse hoodie, black hoodie fit inspo.jpg" alt="Women's Hoodie">
+                <h3>Women's Faith Hoodie</h3>
+                <p>R250</p>
+                <button class="btn" onclick="addToCart('Women\'s Faith Hoodie', 250)">Add to Cart</button>
+            </div>
             
-                </ul>
-            </nav>
-            <img src="_images/Jesus Paid It All Receipt Hoodie Bible Verse- Etsy (1).jpg" alt="">
-            <p>Jesus paid it all hoodies  </p>
-            <p><strong>R250</strong></p> 
-            <nav>
-                <ul>
-                    <li><a href="jesus_paid.html">view more</a></li>
+            <div class="product-card">
+                <img src="_images/Jesus Paid It All Receipt Hoodie Bible Verse- Etsy (1).jpg" alt="Jesus Paid It All Hoodie">
+                <h3>Jesus Paid It All Hoodie</h3>
+                <p>R250</p>
+                <button class="btn" onclick="addToCart('Jesus Paid It All Hoodie', 250)">Add to Cart</button>
+            </div>
             
-                </ul>
-            </nav>
-            <img src="_images/download.jpg" alt="">
-            <p>male hoodies</p>
-            <p><strong>R250</strong></p>
-            <nav>
-                <ul>
-                    <li><a href="male_hoodie.html">view more</a></li>
+            <div class="product-card">
+                <img src="_images/il_1080xN.6038171900_8tao.webp" alt="Men's Hoodie">
+                <h3>Men's Christian Hoodie</h3>
+                <p>R250</p>
+                <button class="btn" onclick="addToCart('Men\'s Christian Hoodie', 250)">Add to Cart</button>
+            </div>
             
-                </ul>
-            </nav>
-            <img src="_images/HoneySoulShop - Etsy.jpg" alt="">
-            <p>T-shirts</p>
-            <p><strong>R150</strong></p>
-            <nav>
-                <ul>
-                    <li><a href="tshirt.html">view more</a></li>
-            
-                </ul>
-            </nav>
-          
-            <img src="_images/download (1).jpeg" alt="">
-            <p>T-shirts</p>
-            <p><strong>R150</strong></p>
-            <nav>
-                <ul>
-                    <li><a href="tshirt.html">view more</a></li>
-            
-                </ul>
-            
+            <div class="product-card">
+                <img src="_images/he’s not mad at you 💚.jpeg" alt="Faith T-Shirt">
+                <h3>Faith T-Shirt</h3>
+                <p>R150</p>
+                <button class="btn" onclick="addToCart('Faith T-Shirt', 150)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Shopping Cart -->
+        <section>
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="product-card">
+                <p>Your cart is empty</p>
+            </div>
+            <button class="btn" onclick="clearCart()">Clear Cart</button>
+            <button class="btn" onclick="checkout()">Checkout</button>
+        </section>
     </main>
+
     <footer>
-        <p><strong> © 2025, The Chosen Path Powered by Shopify</strong></p>
-        <p><strong>quick links </strong></p>
+        <p><strong>&copy; 2025, The Chosen Path</strong></p>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About us</a></li>
-                <li><a href= ""> Products and services</a>
-                <li><a href="faith_comunity.html">Faith and community</a></li>  
-                <li><a href="contact_us.html">contact us</a></li>
-                <li><a href="refund policy">Refund policy</a></li>
-                <li><a href="terms and conditions">Terms and Conditions</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="">Products</a>
+                <li><a href="faith_comunity.html">Faith & Community</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
-
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
