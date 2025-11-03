@@ -6,7 +6,17 @@
     --highlight: #C49A6C;
     --text-dark: #2C2C2C;
     --text-light: #FAFAFA;
+
+    --sage: #87A96B;
+    --olive: #6B8E23;
+    --taupe: #483C32;
+    --clay: #B37A4C;
+    --rust: #B7410E;
+    --sand: #F4A460;
+    --cream: #F5F5DC;
+    --stone: #928E85;
 }
+
 
 /* base Styles */
 * {
