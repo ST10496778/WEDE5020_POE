@@ -1,53 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faith & Community - The Chosen Path Christian Clothing</title>
-    <meta name="description" content="Join our faith community. Share testimonies, read daily verses, connect with other Christians, and grow together in faith through The Chosen Path community.">
-    <meta name="keywords" content="christian community, faith testimonies, bible verses, prayer requests, christian youth group, daily devotion">
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
-    <header>
-        <img src="_images/Screenshot 2025-08-26 092949.png" alt="Logo">
-        <div class="logo">The Chosen Path</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="">Faith & Community</a>
-                <li><a href="contact_us.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Faith & Community</h1>
-        <p class="subtitle">Growing Together in Faith, Supporting Each Other in Love</p>
-
-        <!-- Daily Devotion Section -->
-        <section class="devotion-section">
-            <div class="devotion-card">
-                <div class="devotion-header">
-                    <h2>Daily Devotion</h2>
-                    <span class="devotion-date" id="current-date"></span>
-                </div>
-                <div class="verse-of-day">
-                    <h3>Verse of the Day</h3>
-                    <div class="verse-content">
-                        <p class="verse-text">"The LORD himself goes before you and will be with you; he will never leave you nor forsake you. Do not be afraid; do not be discouraged."</p>
-                        <p class="verse-reference">- Deuteronomy 31:8 (NIV)</p>
-                    </div>
-                    <div class="devotion-reflection">
-                        <h4>Today's Reflection</h4>
-                        <p>In moments of uncertainty and fear, remember that God goes before you. He's already in your future, preparing the way and ensuring that you never walk alone. Whatever challenges you face today, walk in the confidence that the Creator of the universe is your personal guide and protector.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Testimonies Section -->
         <section class="testimonies-section">
@@ -75,7 +25,55 @@
                     </div>
                 </div>
                 
-                <div class="testimony-card">
+                <div class="testimony-card"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith & Community - The Chosen Path Christian Clothing</title>
+    <meta name="description" content="Join our faith community. Share testimonies, read daily verses, connect with other Christians, and grow together in faith through The Chosen Path community.">
+    <meta name="keywords" content="christian community, faith testimonies, bible verses, prayer requests, christian youth group, daily devotion">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="_images/Screenshot 2025-08-26 092949.png" alt="Logo">
+        <div class="logo">The Chosen Path</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="faith_comunity.html">Faith & Community</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Faith & Community</h1>
+        <p class="subtitle">Growing Together in Faith, Supporting Each Other in Love</p>
+
+        <!-- Daily Devotion Section -->
+        <section class="devotion-section">
+            <div class="devotion-card">
+                <div class="devotion-header">
+                    <h2>Daily Devotion</h2>
+                    <span class="devotion-date" id="current-date">Monday, November 3, 2025</span>
+                </div>
+                <div class="verse-of-day">
+                    <h3>Verse of the Day</h3>
+                    <div class="verse-content">
+                        <p class="verse-text">"The LORD himself goes before you and will be with you; he will never leave you nor forsake you. Do not be afraid; do not be discouraged."</p>
+                        <p class="verse-reference">- Deuteronomy 31:8 (NIV)</p>
+                    </div>
+                    <div class="devotion-reflection">
+                        <h4>Today's Reflection</h4>
+                        <p>In moments of uncertainty and fear, remember that God goes before you. He's already in your future, preparing the way and ensuring that you never walk alone. Whatever challenges you face today, walk in the confidence that the Creator of the universe is your personal guide and protector.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
                     <div class="testimony-content">
                         <p>"The mission is what I adore most, not simply the outfits. I feel like I'm a part of something greater knowing that a portion of my purchases go to the ministry. It's fashion with purpose that extends beyond my wardrobe."</p>
                         <div class="testimony-author">
@@ -310,72 +308,20 @@
         </section>
     </main>
 
-    <footer>
+     <footer>
         <p>&copy; 2025 The Chosen Path</p>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about_us.html">About Us</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="">Faith & Community</a>
+                <li><a href="faith_comunity.html">Faith & Community</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
     </footer>
 
+    <!-- SINGLE script tag only -->
     <script src="script.js"></script>
-    <script>
-        // Set current date
-        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-        });
-
-        // Prayer button functionality
-        document.querySelectorAll('.pray-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const currentText = this.textContent;
-                if (currentText === 'I Prayed 🙏') {
-                    this.textContent = 'Prayed ✅';
-                    this.style.background = 'var(--highlight)';
-                    this.disabled = true;
-                    
-                    // Show confirmation
-                    const confirmation = document.createElement('div');
-                    confirmation.textContent = 'Thank you for praying!';
-                    confirmation.style.cssText = `
-                        position: fixed;
-                        top: 20px;
-                        right: 20px;
-                        background: var(--header);
-                        color: white;
-                        padding: 1rem 2rem;
-                        border-radius: 5px;
-                        z-index: 1000;
-                    `;
-                    document.body.appendChild(confirmation);
-                    setTimeout(() => confirmation.remove(), 3000);
-                }
-            });
-        });
-
-        // Form submission
-        document.getElementById('prayer-request-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for sharing your prayer request. Our community will be praying for you!');
-            this.reset();
-        });
-
-        function joinWhatsApp() {
-            alert('You will be redirected to join our WhatsApp community group. Welcome!');
-        }
-
-        function shareStory() {
-            alert('Thank you for wanting to share your story! You will be redirected to our testimony submission form.');
-        }
-    </script>
-      <script src="script.js"></script>
 </body>
-</html>
+</html> 
