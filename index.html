@@ -3,72 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Chosen Path homepage</title>
+    <title>The Chosen Path - Christian Clothing Brand | Wear Your Faith</title>
+    <meta name="description" content="The Chosen Path - Christian clothing brand for youth. Wear your faith with our inspirational apparel. Hoodies, t-shirts, and community for Gen Z Christians.">
+    <meta name="keywords" content="christian clothing, faith apparel, youth christian wear, christian hoodies, bible verse t-shirts, christian community, gen z christian">
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- Header Section -->
     <header>
-        <img src="_images/Screenshot 2025-08-26 092949.png" alt="Chosen Path Logo">
-        <nav>
+        <img src="_images/Screenshot-2025-08-26-092949.png" alt="The Chosen Path Christian Clothing Brand Logo" width="200" height="60">
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+        <nav aria-label="Main navigation">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="about_us.html">About us</a>
-                <li><a href= "products.html"> Products and services</a></li>
-                <li><a href="faith_comunity.html">Faith and community</a></li>
-                <li><a href="contact_us.html">contact us</a></li>
-            
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Products & Services</a></li>
+                <li><a href="faith_comunity.html">Faith & Community</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-            <main>
-            <h1> HOME </h1>
-            <h2>Welcome to the Chosen Path</h2>
-            <h2>where you  Wear your Faith and Walk your Path</h2>
-            <h3>Who are we?</h3>
-            <p>We are a christian based clothing brand, that is tailored for the youth or Gen Z. The Chosen Path was designed for the young people of this generation to wer their faith and walk their path , and to be confident with their faith and also with what they wear. For the christian youth community to standup for what they believe in unashamedly and to spread the good news. </p>
-            <img src="_images/HoneySoulShop - Etsy.jpg" alt="some poduct we advertise">
-            <h3>Our mission</h3>
-            <p>Our mission at Chosen Path is to inspire and empower the youth of today to walk 
-                confidently in faith through apparel that reflects peace, purpose, and God-given 
-                purpose.
-            </p>
-            <img src="_images/hoodie Jesus loves you.jpg" alt="product">
-            <h3>Our vision</h3>
-            <p>To be a leading Christian clothing brand that inspires this generation to walk boldly in 
-                their faith. We envision a world where the youth wear their purpose, live with peace, and 
-                reflect Christ on every step of their chosen path.
-            </p>
-            <img src="_images/download.jpg" alt="">
-            <h3>What sets us apart?</h3>
-            <p><strong>1. Faith driven purpose :</strong></p>
-            <p> Scripture serves as the source of motivation for each design, which encourages young adults to openly live out their faith while expressing it through fashion.</p>
-            <p><strong>2.Community Over Consumers :</strong></p>
-            <p>Is a movement that promotes belonging via prayer requests, testimonials, and group devotionals. It is more than just a clothes business.</p>
-            <p><strong>3. Ethical and Intentional Production:</strong></p>
-            <p> A dedication to just and sustainable methods that demonstrate stewardship of God's creation.</p>
-            <p><strong>4.Empowering the Next Generation:</strong></p>
-            <p>Targeting young adults who are looking for self-assurance and identity based in Christ rather than societal trends.</p>
-        </main> 
+    <!-- Main Content -->
+    <main>
+        <h1>Welcome to The Chosen Path</h1>
+        <h2>Wear Your Faith, Walk Your Path</h2>
         
-    <footer>
-        <p><strong> © 2025, The Chosen Path Powered by Shopify</strong></p>
-        <p><strong>quick links </strong></p>
-            <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="about_us.html">About us</a>
-                    <li><a href= "products.html"> Products and services</a></li>
-                    <li><a href="faith_comunity.html">Faith and community</a></li>
-                    <li><a href="contact_us.html">contact us</a></li>
-                    <li><a href="refund policy">Refund policy</a></li>
-                    <li><a href="terms and conditions">Terms and Conditions</a></li>
-            
-                </ul>
-            </nav>
-            
-    </footer>  
+        <!-- Search Section -->
+        <section class="search-section" aria-label="Search products">
+            <form id="search-form" role="search">
+                <div class="search-box">
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        placeholder="Search products and content..." 
+                        aria-label="Search through site content"
+                    >
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+            <div id="search-results" class="search-results" aria-live="polite"></div>
+        </section>
 
+        <!-- Who We Are Section -->
+        <section aria-labelledby="who-we-are">
+            <h2 id="who-we-are">Who Are We?</h2>
+            <p>We are a Christian-based clothing brand tailored for the youth and Gen Z. The Chosen Path was designed for young people to wear their faith and walk their path confidently, standing up for what they believe in unashamedly.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="_images/HoneySoulShop-Etsy.jpg" alt="Christian t-shirt with inspirational message" width="400" height="400" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section aria-labelledby="our-mission">
+            <h2 id="our-mission">Our Mission</h2>
+            <p>Our mission at Chosen Path is to inspire and empower the youth of today to walk confidently in faith through apparel that reflects peace, purpose, and God-given identity.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="_images/hoodie-Jesus-loves-you.jpg" alt="Jesus loves you hoodie design" width="400" height="400" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section aria-labelledby="our-vision">
+            <h2 id="our-vision">Our Vision</h2>
+            <p>To be a leading Christian clothing brand that inspires this generation to walk boldly in their faith. We envision a world where youth wear their purpose, live with peace, and reflect Christ on every step of their chosen path.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="_images/download.jpg" alt="Christian hoodie for men" width="400" height="400" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- What Sets Us Apart Section -->
+        <section aria-labelledby="what-sets-us-apart">
+            <h2 id="what-sets-us-apart">What Sets Us Apart</h2>
+            
+            <article>
+                <h3>Faith-Driven Purpose</h3>
+                <p>Scripture serves as the source of motivation for each design, encouraging young adults to openly live out their faith while expressing it through fashion.</p>
+            </article>
+
+            <article>
+                <h3>Community Over Consumers</h3>
+                <p>We are a movement that promotes belonging through prayer requests, testimonials, and group devotionals - more than just a clothing business.</p>
+            </article>
+
+            <article>
+                <h3>Ethical and Intentional Production</h3>
+                <p>A dedication to just and sustainable methods that demonstrate stewardship of God's creation.</p>
+            </article>
+
+            <article>
+                <h3>Empowering the Next Generation</h3>
+                <p>Targeting young adults who are looking for self-assurance and identity rooted in Christ rather than societal trends.</p>
+            </article>
+        </section>
+
+        <!-- Featured Products Preview -->
+        <section aria-labelledby="featured-products">
+            <h2 id="featured-products">Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="_images/Christian-womens-hoodie.jpg" alt="Christian women's hoodie with bible verse" width="300" height="300" loading="lazy">
+                    <h3>Women's Hoodie</h3>
+                    <p>R250</p>
+                    <a href="products.html#female-hoodie" class="btn">View Details</a>
+                </div>
+                <div class="product-card">
+                    <img src="_images/Jesus-Paid-It-All-Hoodie.jpg" alt="Jesus paid it all hoodie design" width="300" height="300" loading="lazy">
+                    <h3>Jesus Paid It All Hoodie</h3>
+                    <p>R250</p>
+                    <a href="products.html#jesus-hoodie" class="btn">View Details</a>
+                </div>
+                <div class="product-card">
+                    <img src="_images/male-hoodie.jpg" alt="Christian hoodie for men" width="300" height="300" loading="lazy">
+                    <h3>Men's Hoodie</h3>
+                    <p>R250</p>
+                    <a href="products.html#male-hoodie" class="btn">View Details</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>&copy; 2025, The Chosen Path Powered by Shopify</strong></p>
+        <p><strong>Quick Links</strong></p>
+        <nav aria-label="Footer navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Products & Services</a></li>
+                <li><a href="faith_comunity.html">Faith & Community</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="refund-policy.html">Refund Policy</a></li>
+                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- Lightbox Structure -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Image preview">
+        <button class="lightbox-close" aria-label="Close image preview">&times;</button>
+        <div class="lightbox-nav">
+            <button class="lightbox-prev" aria-label="Previous image">&#10094;</button>
+            <button class="lightbox-next" aria-label="Next image">&#10095;</button>
+        </div>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
