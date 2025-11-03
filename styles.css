@@ -255,7 +255,7 @@ button:hover, .btn:hover {
     padding: 15px;
     cursor: pointer;
     font-size: 20px;
-    transition: background 0.3s;
+    transition: var(--background) 0.3s;
 }
 
 .lightbox-prev:hover,
