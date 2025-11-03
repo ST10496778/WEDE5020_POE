@@ -3,53 +3,408 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us page </title>
+    <title>Contact Us - The Chosen Path Christian Clothing</title>
+    <meta name="description" content="Get in touch with The Chosen Path. Contact us for customer support, wholesale inquiries, prayer requests, or partnership opportunities.">
+    <meta name="keywords" content="contact christian clothing, customer support, wholesale inquiry, prayer request, partnership, store locations">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="_images/Screenshot 2025-08-26 092949.png" alt="Chosen Path Logo">
+        <div class="logo">The Chosen Path</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About us</a></li>
-                <li><a href= "products.html"> Products and services</a></li>
-                <li><a href="faith_comunity.html">Faith and community</a></li>
-                <li><a href="">contact us</a>
-            
-            </ul>
-        </nav>  
-    </header>
-     <main>
-
-         
-            <H1>Contact us page </H1>
-            <p><strong>Email:</strong> Chosen.path@gmail.com  </p>
-            <p><strong>Telephone:</strong> 011 453 6789</p>
-            <p><strong>operating hours</strong></p>
-            <p><strong>Mon-Fri:</strong> 9am-5pm</p>
-            <p><strong>Sat:</strong> 9am-3pm</p>
-            <p><strong>Sun & Public holidays:</strong> closed</p>
-            <p><strong>Physical address:</strong> 15 Aniston place</p>
-        
-        
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.2492172029497!2d27.967874274173006!3d-26.025400577187156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95766215d13b37%3A0xd50e033e1dec0d76!2s15%20Arniston%20Pl%2C%20Bloubosrand%2C%20Randburg%2C%202188!5e0!3m2!1sen!2sza!4v1756303584259!5m2!1sen!2sza" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </main>
-        <footer>
-            <p><strong> © 2025, The Chosen Path Powered by Shopify</strong></p>
-            <p><strong>quick links </strong></p>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About us</a></li>
-                <li><a href= "products.html"> Products and services</a></li>
-                <li><a href="faith_comunity.html">Faith and community</a></li>
-                <li><a href="">contact us</a>
-                <li><a href="refund policy">Refund policy</a></li>
-                <li><a href="terms and conditions">Terms and Conditions</a></li>
-            
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="faith_comunity.html">Faith & Community</a></li>
+                <li><a href="">Contact Us</a>
             </ul>
         </nav>
-        </footer>
-    
+    </header>
+
+    <main>
+        <h1>Get In Touch</h1>
+        <p class="subtitle">We'd Love to Hear From You - Let's Connect in Faith</p>
+
+        <!-- Contact Header -->
+        <section class="contact-header">
+            <div class="contact-intro">
+                <h2>How Can We Help You Today?</h2>
+                <p>Whether you have questions about our products, need support with an order, want to share a testimony, or are interested in partnering with us, we're here to serve you with love and excellence.</p>
+            </div>
+        </section>
+
+        <!-- Quick Contact Options -->
+        <section class="quick-contact">
+            <h2>Quick Contact Options</h2>
+            <div class="contact-options-grid">
+                <div class="contact-option-card">
+                    
+                    <h3>Email Us</h3>
+                    <p>For general inquiries and customer support</p>
+                    <a href="mailto:info@chosenpath.co.za" class="btn btn-outline">Send Email</a>
+                </div>
+                
+                <div class="contact-option-card">
+                    <p>Speak directly with our team</p>
+                    <a href="tel:+27111234567" class="btn btn-outline">Call Now</a>
+                </div>
+                
+                <div class="contact-option-card">
+                    <h3>Live Chat</h3>
+                    <p>Get instant help during business hours</p>
+                    <button class="btn btn-outline" onclick="openLiveChat()">Start Chat</button>
+                </div>
+                
+                <div class="contact-option-card">
+                    <h3>Prayer Request</h3>
+                    <p>Share your prayer needs with our community</p>
+                    <a href="faith_comunity.html#prayer" class="btn btn-outline">Request Prayer</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Contact Section -->
+        <section class="main-contact-section">
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <form id="contact-form" class="enhanced-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+27 11 123 4567">
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Inquiry Type *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select an option</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="product">Product Question</option>
+                                    <option value="order">Order Support</option>
+                                    <option value="wholesale">Wholesale Inquiry</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="testimony">Share Testimony</option>
+                                    <option value="prayer">Prayer Request</option>
+                                    <option value="feedback">Feedback & Suggestions</option>
+                                </select>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="order-number">Order Number (if applicable)</label>
+                            <input type="text" id="order-number" name="order-number" placeholder="e.g., CP-2024-001">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please share your message, prayer request, or testimony in detail..."></textarea>
+                            <div class="error-message"></div>
+                            <div class="char-count">
+                                <span id="char-counter">0</span>/500 characters
+                            </div>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter" checked>
+                            <label for="newsletter">Yes, I'd like to receive updates about new products, events, and devotionals</label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">Sending...</span>
+                            </button>
+                            <button type="reset" class="btn btn-secondary">Clear Form</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <div class="contact-info-card">
+                        <h2>Contact Information</h2>
+                        
+                        <div class="info-group">
+                            <h3> Email Addresses</h3>
+                            <div class="info-item">
+                                <strong>General Inquiries:</strong>
+                                <a href="mailto:info@chosenpath.co.za">info@chosenpath.co.za</a>
+                            </div>
+                            <div class="info-item">
+                                <strong>Customer Support:</strong>
+                                <a href="mailto:support@chosenpath.co.za">support@chosenpath.co.za</a>
+                            </div>
+                            <div class="info-item">
+                                <strong>Wholesale & Partnerships:</strong>
+                                <a href="mailto:wholesale@chosenpath.co.za">wholesale@chosenpath.co.za</a>
+                            </div>
+                        </div>
+
+                        <div class="info-group">
+                            <h3>Phone Numbers</h3>
+                            <div class="info-item">
+                                <strong>Customer Service:</strong>
+                                <a href="tel:+27111234567">+27 11 123 4567</a>
+                            </div>
+                            <div class="info-item">
+                                <strong>WhatsApp Business:</strong>
+                                <a href="https://wa.me/27111234567">+27 11 123 4567</a>
+                            </div>
+                        </div>
+
+                        <div class="info-group">
+                            <h3> Business Hours</h3>
+                            <div class="business-hours">
+                                <div class="hour-item">
+                                    <span>Monday - Friday</span>
+                                    <span>9:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span>Saturday</span>
+                                    <span>10:00 AM - 2:00 PM</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span>Sunday</span>
+                                    <span>Closed</span>
+                                </div>
+                                <div class="hour-item highlight">
+                                    <span>Emergency Support</span>
+                                    <span>24/7 via Email</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-group">
+                            <h3> Visit Us</h3>
+                            <div class="info-item">
+                                <strong>Main Office:</strong>
+                                <p>15 Aniston Place<br>Johannesburg, 2188<br>South Africa</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-links">
+                            <h3>Follow Our Journey</h3>
+                            <div class="social-grid">
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <span> Instagram</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <span> Facebook</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="TikTok">
+                                    <span> TikTok</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="YouTube">
+                                    <span> YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map & Location Section -->
+        <section class="map-section">
+            <div class="map-header">
+                <h2>Find Us</h2>
+                <p>Visit our main office or connect with our regional representatives across South Africa</p>
+            </div>
+            <div class="map-container">
+                <div id="google-map" class="google-map">
+                    <!-- Google Maps embed will be loaded here -->
+                </div>
+            </div>
+            <div class="location-details">
+                <div class="location-card">
+                    <h3>Johannesburg Office</h3>
+                    <p>15 Aniston place , Johannesburg, 2188</p>
+                    <p><strong>Hours:</strong> Mon-Fri 9AM-5PM, Sat 10AM-2PM</p>
+                    <button class="btn btn-outline" onclick="getDirections()">Get Directions</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Regional Contacts -->
+        <section class="regional-contacts">
+            <h2>Regional Contacts</h2>
+            <div class="regional-grid">
+                <div class="regional-card">
+                    <h3>Cape Town</h3>
+                    <p>Regional Representative: Sarah Johnson</p>
+                    <a href="mailto:capetown@chosenpath.co.za">capetown@chosenpath.co.za</a>
+                    <a href="tel:+27211234567">+27 21 123 4567</a>
+                </div>
+                <div class="regional-card">
+                    <h3>Durban</h3>
+                    <p>Regional Representative: Mike Naidoo</p>
+                    <a href="mailto:durban@chosenpath.co.za">durban@chosenpath.co.za</a>
+                    <a href="tel:+27311234567">+27 31 123 4567</a>
+                </div>
+                <div class="regional-card">
+                    <h3>Pretoria</h3>
+                    <p>Regional Representative: James Botha</p>
+                    <a href="mailto:pretoria@chosenpath.co.za">pretoria@chosenpath.co.za</a>
+                    <a href="tel:+27129876543">+27 12 987 6543</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Response Time Info -->
+        <section class="response-info">
+            <div class="response-card">
+                <h2>What to Expect After Contacting Us</h2>
+                <div class="response-timeline">
+                    <div class="response-item">
+                        <div class="response-time">Within 1 Hour</div>
+                        <div class="response-detail">Auto-confirmation email sent</div>
+                    </div>
+                    <div class="response-item">
+                        <div class="response-time">Within 4 Hours</div>
+                        <div class="response-detail">Initial response during business hours</div>
+                    </div>
+                    <div class="response-item">
+                        <div class="response-time">Within 24 Hours</div>
+                        <div class="response-detail">Detailed follow-up for complex inquiries</div>
+                    </div>
+                    <div class="response-item">
+                        <div class="response-time">Within 3 Days</div>
+                        <div class="response-detail">Resolution for most customer service issues</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact -->
+        <section class="emergency-contact">
+            <div class="emergency-card">
+                <div class="emergency-content">
+                    <h3>Need Urgent Help?</h3>
+                    <p>For order emergencies or time-sensitive issues, call our priority support line</p>
+                    <a href="tel:+27831234567" class="btn btn-emergency"> Call Emergency Support: +27 83 123 4567</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Chosen Path</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="faith_comunity.html">Faith & Community</a></li>
+                <li><a href="">Contact Us</a>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Character counter for message field
+        const messageField = document.getElementById('message');
+        const charCounter = document.getElementById('char-counter');
+
+        messageField.addEventListener('input', function() {
+            const length = this.value.length;
+            charCounter.textContent = length;
+            
+            if (length > 500) {
+                charCounter.style.color = 'red';
+            } else if (length > 400) {
+                charCounter.style.color = 'orange';
+            } else {
+                charCounter.style.color = 'green';
+            }
+        });
+
+        // Enhanced form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.btn-primary');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Show success message
+                showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
+                
+                // Reset form
+                this.reset();
+                charCounter.textContent = '0';
+                charCounter.style.color = 'green';
+                
+                // Reset button
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <span class="notification-icon">${type === 'success' ? '✅' : '⚠️'}</span>
+                    <span>${message}</span>
+                    <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+
+        function openLiveChat() {
+            showNotification('Live chat is available during business hours. Please call or email for immediate assistance.', 'info');
+        }
+
+        function getDirections() {
+            window.open('https://maps.google.com?q=123+Faith+Street+Johannesburg+2000+South+Africa', '_blank');
+        }
+
+        // Initialize map
+        document.addEventListener('DOMContentLoaded', function() {
+            const mapContainer = document.getElementById('google-map');
+            if (mapContainer) {
+                mapContainer.innerHTML = `
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.2493644902365!2d27.967868909541018!3d-26.02539575661768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95766215d13b37%3A0xd50e033e1dec0d76!2s15%20Arniston%20Pl%2C%20Bloubosrand%2C%20Randburg%2C%202188!5e0!3m2!1sen!2sza!4v1762183101590!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                `;
+            }
+        });
+    </script>
 </body>
 </html>
