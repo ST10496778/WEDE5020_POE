@@ -494,46 +494,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Category filtering
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const productCards = document.querySelectorAll('.product-card');
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    const category = this.getAttribute('data-category');
-                    
-                    // Show/hide products based on category
-                    productCards.forEach(card => {
-                        if (category === 'all' || card.getAttribute('data-category') === category) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            // Size selection validation
-            const addToCartButtons = document.querySelectorAll('.add-to-cart');
-            addToCartButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    const sizeDropdown = this.closest('.product-card').querySelector('.size-dropdown');
-                    if (!sizeDropdown.value) {
-                        e.preventDefault();
-                        alert('Please select a size before adding to cart.');
-                        sizeDropdown.focus();
-                    }
-                });
-            });
-        });
-    </script>
 </body>
- <script src="script.js"></script>
 </html>
