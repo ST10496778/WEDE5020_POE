@@ -1,164 +1,359 @@
-//  validation
-function validateForm(formId) {
-    const form = document.getElementById(formId);
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
-    let isValid = true;
+// Enhanced Website Features JavaScript
 
-    inputs.forEach(input => {
-        const error = input.nextElementSibling;
-        if (!input.value.trim()) {
-            isValid = false;
-            input.style.borderColor = 'red';
-            if (error && error.classList.contains('error')) {
-                error.textContent = 'This field is required';
-                error.style.display = 'block';
-            }
+document.addEventListener('DOMContentLoaded', function() {
+    initializeEnhancedFeatures();
+});
+
+function initializeEnhancedFeatures() {
+    // Back to Top Button
+    initBackToTop();
+    // index box 
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing code ...
+    initFloatingBoxes();
+});
+    // Reading Progress Bar
+    initReadingProgress();
+    
+    // Mobile Navigation
+    initMobileMenu();
+    
+    // Search Overlay
+    initSearchOverlay();
+    
+    // Testimonial Carousel
+    initTestimonialCarousel();
+    
+    // Newsletter Popup
+    initNewsletterPopup();
+    
+    // Staggered Animations
+    initStaggerAnimations();
+    
+    // Product Quick View
+    initQuickView();
+    
+    // Countdown Timer
+    initCountdownTimer();
+    
+    // Social Proof Counter
+    initSocialProof();
+}
+
+// Back to Top Functionality
+function initBackToTop() {
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.innerHTML = '↑';
+    backToTopBtn.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(backToTopBtn);
+
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'block';
         } else {
-            input.style.borderColor = '#ddd';
-            if (error && error.classList.contains('error')) {
-                error.style.display = 'none';
-            }
+            backToTopBtn.style.display = 'none';
         }
     });
 
-    return isValid;
-}
-
-// Search functionality
-function performSearch() {
-    const searchTerm = document.getElementById('search-input').value.toLowerCase();
-    const results = document.getElementById('search-results');
-    
-    if (!searchTerm) {
-        results.innerHTML = '<p>Please enter a search term</p>';
-        return;
-    }
-
-    // Simple search simulation
-    const products = ['Hoodie', 'T-Shirt', 'Jesus Paid It All', 'Faith Design'];
-    const filtered = products.filter(product => 
-        product.toLowerCase().includes(searchTerm)
-    );
-
-    if (filtered.length === 0) {
-        results.innerHTML = '<p>No products found</p>';
-    } else {
-        results.innerHTML = '<ul>' + filtered.map(item => 
-            `<li><a href="products.html">${item}</a></li>`
-        ).join('') + '</ul>';
-    }
-}
-
-// Shopping cart
-let cart = [];
-
-function addToCart(product, price) {
-    const sizeDropdown = event.target.closest('.product-card').querySelector('.size-dropdown');
-    const selectedSize = sizeDropdown ? sizeDropdown.value : '';
-    
-    if (!selectedSize) {
-        alert('Please select a size before adding to cart.');
-        return;
-    }
-    
-    cart.push({ 
-        product: product, 
-        price: price,
-        size: selectedSize
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
-    updateCart();
-    showCartNotification(`${product} (Size: ${selectedSize}) added to cart!`);
+}
+   floatingBoxes.forEach(box => {
+        box.addEventListener('click', function() {
+            floatingBoxes.forEach(b => b.classList.remove('active'));
+                 this.classList.add('active');
+    } )
+    })
+    
+// Reading Progress Bar
+function initReadingProgress() {
+    const progressBar = document.createElement('div');
+    progressBar.className = 'reading-progress';
+    document.body.appendChild(progressBar);
+
+    window.addEventListener('scroll', function() {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight - windowHeight;
+        const scrollTop = window.pageYOffset;
+        const progress = (scrollTop / documentHeight) * 100;
+        progressBar.style.width = progress + '%';
+    });
 }
 
-function updateCart() {
-    const cartElement = document.getElementById('cart-items');
-    const totalElement = document.getElementById('cart-total-amount');
+// Mobile Menu
+function initMobileMenu() {
+    const mobileMenuBtn = document.createElement('button');
+    mobileMenuBtn.className = 'mobile-menu-btn';
+    mobileMenuBtn.innerHTML = '☰';
+    mobileMenuBtn.setAttribute('aria-label', 'Toggle menu');
     
-    if (!cartElement) return;
-
-    if (cart.length === 0) {
-        cartElement.innerHTML = '<p>Your cart is empty</p>';
-        if (totalElement) totalElement.textContent = '0';
-    } else {
-        const total = cart.reduce((sum, item) => sum + item.price, 0);
-        cartElement.innerHTML = cart.map(item => `
-            <div class="cart-item">
-                <div>
-                    <strong>${item.product}</strong><br>
-                    <small>Size: ${item.size} | R${item.price}</small>
-                </div>
-                <button onclick="removeFromCart('${item.product}-${item.size}')">×</button>
-            </div>
-        `).join('');
+    const header = document.querySelector('header .header-content');
+    if (header) {
+        header.appendChild(mobileMenuBtn);
         
-        if (totalElement) totalElement.textContent = total;
+        const nav = document.querySelector('nav ul');
+        mobileMenuBtn.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
     }
 }
 
-function removeFromCart(productId) {
-    cart = cart.filter(item => `${item.product}-${item.size}` !== productId);
-    updateCart();
+// Search Overlay
+function initSearchOverlay() {
+    const searchOverlay = document.createElement('div');
+    searchOverlay.className = 'search-overlay';
+    searchOverlay.innerHTML = `
+        <div class="search-overlay-content">
+            <button class="search-overlay-close" aria-label="Close search">×</button>
+            <h3>Search Our Site</h3>
+            <div class="search-box">
+                <input type="search" placeholder="What are you looking for?" id="overlay-search">
+                <button type="submit">Search</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(searchOverlay);
+
+    
+    
+
+    // Close search overlay
+    document.querySelector('.search-overlay-close').addEventListener('click', function() {
+        searchOverlay.classList.remove('active');
+    });
+
+    searchOverlay.addEventListener('click', function(e) {
+        if (e.target === searchOverlay) {
+            searchOverlay.classList.remove('active');
+        }
+    });
 }
 
-function showCartNotification(message) {
-    const notification = document.createElement('div');
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: var(--header);
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 5px;
-        z-index: 1000;
-        animation: slideIn 0.3s ease;
-    `;
-    notification.textContent = message;
-    document.body.appendChild(notification);
+// Testimonial Carousel
+function initTestimonialCarousel() {
+    const carousels = document.querySelectorAll('.testimonial-carousel');
     
+    carousels.forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+        const slides = carousel.querySelectorAll('.testimonial-slide');
+        const nextBtn = carousel.querySelector('.carousel-next');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        let currentSlide = 0;
+
+        function goToSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            
+            track.style.transform = `translateX(-${index * 100}%)`;
+            currentSlide = index;
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+        }
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+        }
+
+        // Auto-advance carousel
+        setInterval(() => goToSlide(currentSlide + 1), 5000);
+    });
+}
+
+// Newsletter Popup
+function initNewsletterPopup() {
+    // Only show if not shown before
+    if (localStorage.getItem('newsletterShown')) return;
+
     setTimeout(() => {
-        notification.remove();
+        const popup = document.createElement('div');
+        popup.className = 'newsletter-popup';
+        popup.innerHTML = `
+            <button class="newsletter-close" aria-label="Close newsletter">×</button>
+            <h3>Join Our Faith Family</h3>
+            <p>Subscribe to get weekly devotionals, exclusive offers, and community updates.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        `;
+        document.body.appendChild(popup);
+
+        setTimeout(() => popup.classList.add('show'), 1000);
+
+        document.querySelector('.newsletter-close').addEventListener('click', function() {
+            popup.classList.remove('show');
+            setTimeout(() => popup.remove(), 500);
+            localStorage.setItem('newsletterShown', 'true');
+        });
+
+        popup.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showNotification('Thank you for subscribing!', 'success');
+            popup.classList.remove('show');
+            setTimeout(() => popup.remove(), 500);
+            localStorage.setItem('newsletterShown', 'true');
+        });
     }, 3000);
 }
 
-function checkout() {
-    if (cart.length === 0) {
-        alert('Your cart is empty!');
-        return;
-    }
+// Staggered Animations
+function initStaggerAnimations() {
+    const staggerItems = document.querySelectorAll('.stagger-item');
     
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
-    const orderDetails = cart.map(item => 
-        `${item.product} (Size: ${item.size}) - R${item.price}`
-    ).join('\n');
-    
-    alert(`Order Summary:\n\n${orderDetails}\n\nTotal: R${total}\n\nProceeding to checkout...`);
-    // In real implementation, redirect to checkout page
-}
-
-// Initialize map
-function initMap() {
-    const mapContainer = document.getElementById('google-map');
-    if (mapContainer) {
-        mapContainer.innerHTML = `
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.123456789012!2d28.047305!3d-26.204103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1c1c1c1c1c%3A0x1234567890abcdef!2sJohannesburg!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" 
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        `;
-    }
-}
-
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    initMap();
-    
-    // Add form validation
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            if (!validateForm(this.id)) {
-                e.preventDefault();
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.animationDelay = `${index * 0.1}s`;
+                    entry.target.classList.add('stagger-item');
+                }, 100);
+                observer.unobserve(entry.target);
             }
         });
+    }, { threshold: 0.1 });
+
+    staggerItems.forEach(item => observer.observe(item));
+}
+
+// Quick View for Products
+function initQuickView() {
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('quick-view-btn')) {
+            const productCard = e.target.closest('.product-card');
+            const productName = productCard.querySelector('h3').textContent;
+            const productPrice = productCard.querySelector('.price').textContent;
+            const productImage = productCard.querySelector('img').src;
+            
+            showQuickViewModal(productName, productPrice, productImage);
+        }
     });
-});
+}
+
+function showQuickViewModal(name, price, image) {
+    const modal = document.createElement('div');
+    modal.className = 'quick-view-modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            <div class="modal-body">
+                <img src="${image}" alt="${name}">
+                <div class="modal-info">
+                    <h3>${name}</h3>
+                    <div class="price">${price}</div>
+                    <p>Product description and details would go here...</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.remove();
+    });
+}
+
+// Countdown Timer
+function initCountdownTimer() {
+    const countdownElement = document.querySelector('.countdown');
+    if (!countdownElement) return;
+
+    const countdownDate = new Date();
+    countdownDate.setDate(countdownDate.getDate() + 90); // 90 days from now
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown-days').textContent = days;
+        document.getElementById('countdown-hours').textContent = hours;
+        document.getElementById('countdown-minutes').textContent = minutes;
+        document.getElementById('countdown-seconds').textContent = seconds;
+
+        if (distance < 0) {
+            clearInterval(countdownTimer);
+            countdownElement.innerHTML = '<div class="countdown-ended">Sale Ended!</div>';
+        }
+    }
+
+    const countdownTimer = setInterval(updateCountdown, 1000);
+    updateCountdown();
+}
+
+
+// Notification System
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span class="notification-icon">${getNotificationIcon(type)}</span>
+            <span>${message}</span>
+            <button class="notification-close">×</button>
+        </div>
+    `;
+    document.body.appendChild(notification);
+
+    setTimeout(() => notification.classList.add('show'), 100);
+
+    notification.querySelector('.notification-close').addEventListener('click', () => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    });
+
+    setTimeout(() => {
+        if (notification.parentElement) {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 300);
+        }
+    }, 5000);
+}
+
+function getNotificationIcon(type) {
+    const icons = {
+        success: '✅',
+        error: '❌',
+        info: 'ℹ️',
+        warning: '⚠️'
+    };
+    return icons[type] || icons.info;
+}
+
+// Utility Functions
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+ const title = this.querySelector('h3').textContent;
+            showNotification(`Learn more about: ${title}`, 'info');
+
+
+
+// Export for global use
+window.showNotification = showNotification;

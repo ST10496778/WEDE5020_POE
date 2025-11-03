@@ -126,3 +126,118 @@ Added more products on the product.html as adviced
 Addded more content on the about_us.html page as advised 
 ## 9.3 Update on proposal 
 I have editted my grant chart in order for it not to be vague, I have added very small detail based on what i was adviced 
+## 9.4 ALL changes made from POE Part 3
+## 9.4.1.1 CSS STYLING UPDATES
+Color Scheme Changes:
+Changed from original colors to earthy tones:
+
+sand: #E6D2AA (Light sand background)
+clay: #B35441 (Terracotta accent)
+olive: #6B8E23 (Olive green)
+sage: #87A96B (Sage green)
+taupe: #8B7355 (Taupe brown)
+cream: #F5F5DC (Cream)
+
+## 9.4.1.2 Layout & Structure:
+Added proper header structure with logo container
+Implemented flexbox/grid layouts for all sections
+Added responsive design with media queries
+Created consistent card designs across all pages
+
+Enhanced Components:
+Floating boxes for "What Sets Us Apart" section
+Hover animations and transitions
+Professional product cards with badges
+Enhanced forms with validation styling
+Mobile navigation menu
+Back to top button styling
+Notification system styling
+
+Interactive Elements:
+Button hover effects with transforms
+Form focus states with glow effects
+Image hover animations with scale
+Loading states for forms
+Progress bars and indicators
+
+2. JAVASCRIPT FUNCTIONALITY ADDED
+Shopping Cart System:
+javascript
+// Complete cart management
+let cart = [];
+function addToCart(product, price, size)
+function removeFromCart(productId)
+function updateCart()
+function clearCart()
+function checkout()
+Form Validation:
+Required field validation
+
+Email format checking
+Character counters for textareas
+Size selection validation for products
+Loading states during submission
+
+User Experience Features:
+Back to top button with smooth scroll
+Reading progress bar
+Mobile menu toggle
+Search functionality
+Notification system with different types
+Product filtering by categories
+
+Interactive Components:
+Floating boxes animations
+Testimonial carousel with auto-advance
+Prayer button interactions
+Google Maps integration
+Character counters for forms
+Form submission handling
+
+Enhanced Functionality:
+Size selection validation before adding to cart
+Category filtering for products
+Responsive image handling
+Error message display
+Success notifications
+Loading states for better UX
+
+3. NEW FEATURES IMPLEMENTED
+Navigation & Layout:
+Logo integration on all pages
+Mobile-responsive navigation
+Back to top functionality
+Search overlay
+
+E-commerce Features:
+Shopping cart with item management
+Product categories filtering
+Size selection with validation
+Price display and totals
+Quick view functionality
+
+User Engagement:
+Floating animations for key sections
+Hover effects throughout
+Interactive forms with validation
+Notification system
+Progress indicators
+
+Content Enhancement:
+Expanded About Us with company story
+Enhanced Mission & Vision sections
+Testimonial carousel
+
+Community features (prayer wall, events)
+
+ Professional contact forms
+
+Technical Improvements:
+Responsive design for all deviceS
+Performance optimizations
+Accessibility features
+SEO optimization with meta tags
+Cross-browser compatibility
+
+
+
