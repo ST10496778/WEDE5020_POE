@@ -8,7 +8,7 @@
     --text-light: #FAFAFA;
 }
 
-/* Styles */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -50,23 +50,30 @@ header nav ul {
     padding: 0;
 }
 
-header nav a {
+/* Pseudo-classes */
+header nav a:link {
     text-decoration: none;
     color: var(--text-light);
     font-weight: bold;
-    transition: color 0.3s;
+    transition: all 0.3s;
     padding: 5px 10px;
     border-radius: 4px;
+}
+
+header nav a:visited {
+    color: var(--text-light);
 }
 
 header nav a:hover,
 header nav a:focus {
     color: var(--highlight);
     background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 header nav a:active {
     color: var(--accent);
+    transform: translateY(0);
 }
 
 /* Mobile Navigation */
@@ -77,6 +84,7 @@ header nav a:active {
     color: var(--text-light);
     font-size: 24px;
     cursor: pointer;
+    padding: 5px;
 }
 
 /* MAIN */
@@ -90,20 +98,26 @@ main {
 
 main h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 5vw, 38px);
+    font-size: 2.5rem;
     color: var(--header);
     margin-bottom: 20px;
     text-align: center;
 }
 
 main h2 {
-    font-size: clamp(22px, 4vw, 28px);
+    font-size: 2rem;
     color: var(--header);
     margin: 30px 0 15px;
 }
 
+main h3 {
+    font-size: 1.5rem;
+    color: var(--header);
+    margin: 20px 0 10px;
+}
+
 main p {
-    font-size: clamp(16px, 2vw, 18px);
+    font-size: 1.125rem;
     margin-bottom: 20px;
     text-align: left;
 }
@@ -115,16 +129,23 @@ button, .btn {
     padding: 12px 28px;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
     text-decoration: none;
     display: inline-block;
     margin: 10px 5px;
+    font-family: inherit;
 }
 
 button:hover, .btn:hover {
     background-color: var(--highlight);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:active, .btn:active {
+    transform: translateY(0);
 }
 
 /* Product Grid */
@@ -175,8 +196,9 @@ button:hover, .btn:hover {
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 1rem;
     transition: border-color 0.3s;
+    font-family: inherit;
 }
 
 .form-group input:focus,
@@ -188,7 +210,7 @@ button:hover, .btn:hover {
 
 .form-group .error {
     color: #dc3545;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-top: 5px;
     display: none;
 }
@@ -236,6 +258,7 @@ button:hover, .btn:hover {
     cursor: pointer;
     background: none;
     border: none;
+    padding: 5px;
 }
 
 .lightbox-nav {
@@ -295,7 +318,7 @@ button:hover, .btn:hover {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-#google-map {
+.google-map {
     width: 100%;
     height: 400px;
     border: none;
@@ -319,7 +342,7 @@ button:hover, .btn:hover {
     border: 2px solid var(--header);
     border-right: none;
     border-radius: 8px 0 0 8px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .search-box button {
@@ -356,6 +379,20 @@ button:hover, .btn:hover {
     border-left: 4px solid var(--accent);
 }
 
+/* Event List */
+.event-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.event-list li {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid var(--highlight);
+}
+
 /* FOOTER */
 footer {
     background-color: var(--footer);
@@ -375,18 +412,24 @@ footer nav ul {
     margin: 20px 0;
 }
 
-footer nav a {
+footer nav a:link,
+footer nav a:visited {
     color: var(--highlight);
     text-decoration: none;
     transition: color 0.3s;
 }
 
-footer nav a:hover {
+footer nav a:hover,
+footer nav a:focus {
     color: var(--accent);
     text-decoration: underline;
 }
 
+footer nav a:active {
+    color: var(--text-light);
+}
 
+/* Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-wrap: wrap;
@@ -411,7 +454,7 @@ footer nav a:hover {
         margin-top: 15px;
     }
     
-    header nav a {
+    header nav a:link {
         display: block;
         padding: 10px;
         border: 1px solid rgba(255,255,255,0.2);
@@ -434,6 +477,22 @@ footer nav a:hover {
     main {
         padding: 20px 5%;
     }
+    
+    main h1 {
+        font-size: 2rem;
+    }
+    
+    main h2 {
+        font-size: 1.75rem;
+    }
+    
+    main h3 {
+        font-size: 1.25rem;
+    }
+    
+    main p {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -454,10 +513,24 @@ footer nav a:hover {
     }
     
     main h1 {
-        font-size: 24px;
+        font-size: 1.75rem;
     }
     
     main h2 {
-        font-size: 20px;
+        font-size: 1.5rem;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .search-box input {
+        border-radius: 8px;
+        border: 2px solid var(--header);
+        margin-bottom: 10px;
+    }
+    
+    .search-box button {
+        border-radius: 8px;
     }
 }
