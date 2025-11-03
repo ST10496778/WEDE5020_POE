@@ -8,7 +8,7 @@
     --text-light: #FAFAFA;
 }
 
-/* Reset and Base Styles */
+/* Styles */
 * {
     margin: 0;
     padding: 0;
@@ -255,7 +255,7 @@ button:hover, .btn:hover {
     padding: 15px;
     cursor: pointer;
     font-size: 20px;
-    transition: var(--background) 0.3s;
+    transition: background 0.3s;
 }
 
 .lightbox-prev:hover,
@@ -386,7 +386,7 @@ footer nav a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     header {
         flex-wrap: wrap;
