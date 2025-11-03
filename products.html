@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - The Chosen Path</title>
+    <meta name="description" content="Browse our Christian clothing collection - hoodies, t-shirts, dresses, and accessories. Choose your size and style your faith.">
+    <meta name="keywords" content="christian hoodies, faith t-shirts, religious clothing, christian dresses, faith accessories">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,56 +23,325 @@
     </header>
 
     <main>
-        <h1>Our Products</h1>
-        
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="_images/Christian women's hoodie, aesthetic hoodie, bible verse hoodie, black hoodie fit inspo.jpg" alt="Women's Hoodie">
-                <h3>Women's Faith Hoodie</h3>
-                <p>R250</p>
-                <button class="btn" onclick="addToCart('Women\'s Faith Hoodie', 250)">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="_images/Jesus Paid It All Receipt Hoodie Bible Verse- Etsy (1).jpg" alt="Jesus Paid It All Hoodie">
-                <h3>Jesus Paid It All Hoodie</h3>
-                <p>R250</p>
-                <button class="btn" onclick="addToCart('Jesus Paid It All Hoodie', 250)">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="_images/il_1080xN.6038171900_8tao.webp" alt="Men's Hoodie">
-                <h3>Men's Christian Hoodie</h3>
-                <p>R250</p>
-                <button class="btn" onclick="addToCart('Men\'s Christian Hoodie', 250)">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="_images/he’s not mad at you 💚.jpeg" alt="Faith T-Shirt">
-                <h3>Faith T-Shirt</h3>
-                <p>R150</p>
-                <button class="btn" onclick="addToCart('Faith T-Shirt', 150)">Add to Cart</button>
-            </div>
-        </div>
+        <h1>Our Collection</h1>
+        <p class="subtitle">Wear Your Faith With Style & Purpose</p>
 
-        <!-- Shopping Cart -->
-        <section>
-            <h2>Your Cart</h2>
-            <div id="cart-items" class="product-card">
+        <!-- Category Filters -->
+        <section class="category-filters">
+            <h2>Shop by Category</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="hoodies">Hoodies</button>
+                <button class="filter-btn" data-category="tshirts">T-Shirts</button>
+                <button class="filter-btn" data-category="dresses">Dresses</button>
+                <button class="filter-btn" data-category="accessories">Accessories</button>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <div class="product-grid">
+                <!-- Hoodies  -->
+                <div class="product-card" data-category="hoodies">
+                    <div class="product-image">
+                        <img src="_images/#fashion #aesthetic #fitinspo #menswear #menstyle #photography #photo #model.jpeg" alt="Jesus is my bestfriend hoodie">
+                        <span class="product-badge">Bestseller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jesus is my bestfriend Hoodie</h3>
+                        <p class="product-description">Premium cotton hoodie with inspirational scripture print</p>
+                        <div class="price">R250</div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-dropdown">
+                                <option value="">Select Size</option>
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-to-cart" onclick="addToCart('Jesus is my bestfriend Hoodie', 250)">Add to Cart</button>
+                            <button class="btn btn-secondary quick-view" data-product="1">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hoodies">
+                    <div class="product-image">
+                        <img src="_images/Christian women's hoodie, aesthetic hoodie, bible verse hoodie, black hoodie fit inspo.jpg" alt="Psalm 118:6 Hoodie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Jesus Paid It All Hoodie</h3>
+                        <p class="product-description">Comfort fit hoodie with Psalm 118:6 at the back </p>
+                        <div class="price">R250</div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-dropdown">
+                                <option value="">Select Size</option>
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-to-cart" onclick="addToCart('Psalm 118:6 Hoodie added to cart', 250)">Add to Cart</button>
+                            <button class="btn btn-secondary quick-view" data-product="2">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="product-card" data-category="hoodies">
+                    <div class="product-image">
+                        <img src="_images/download.jpg" alt="Win with God Hoodie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Jesus Paid It All Hoodie</h3>
+                        <p class="product-description">Comfort fit hoodie with Psalm 118:6 at the back </p>
+                        <div class="price">R250</div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-dropdown">
+                                <option value="">Select Size</option>
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-to-cart" onclick="addToCart('Jesus Paid It All Hoodie', 299)">Add to Cart</button>
+                            <button class="btn btn-secondary quick-view" data-product="2">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- T-Shirt 1 -->
+                <div class="product-card" data-category="tshirts">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x350/C49A6C/FFFFFF?text=Chosen+Tee" alt="Chosen T-Shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chosen T-Shirt</h3>
+                        <p class="product-description">Soft cotton tee with minimalist faith design</p>
+                        <div class="price">R179</div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-dropdown">
+                                <option value="">Select Size</option>
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-to-cart" onclick="addToCart('Chosen T-Shirt', 179)">Add to Cart</button>
+                            <button class="btn btn-secondary quick-view" data-product="3">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="tshirts">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x350/3A5A40/FFFFFF?text=Grace+Tee" alt="Amazing Grace T-Shirt">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Amazing Grace Tee</h3>
+                        <p class="product-description">Classic fit tee with typography design</p>
+                        <div class="price">R179</div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-dropdown">
+                                <option value="">Select Size</option>
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">X-Large</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-to-cart" onclick="addToCart('Amazing Grace Tee', 179)">Add to Cart</button>
+                            <button class="btn btn-secondary quick-view" data-product="4">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dress 1 -->
+                <div class="product-card" data-category="dresses">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x350/6B705C/FFFFFF?text=Faith+Maxi+Dress" alt="Faith Maxi Dress">
+                    </div>
+                    <div class="product-info">
+                        <h3>Faith Maxi Dress</h3>
+                        <p class="product-description">Elegant maxi dress with subtle cross pattern</p>
+                        <div class="price">R449</div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-dropdown">
+                                <option value="">Select Size</option>
+                                <option value="XS">X-Small</option>
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-to-cart" onclick="addToCart('Faith Maxi Dress', 449)">Add to Cart</button>
+                            <button class="btn btn-secondary quick-view" data-product="5">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessory 1 -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x350/B36A5E/FFFFFF?text=Scripture+Cap" alt="Scripture Baseball Cap">
+                    </div>
+                    <div class="product-info">
+                        <h3>Scripture Baseball Cap</h3>
+                        <p class="product-description">Adjustable cap with embroidered Bible verse</p>
+                        <div class="price">R149</div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-dropdown">
+                                <option value="">Select Size</option>
+                                <option value="OS">One Size</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-to-cart" onclick="addToCart('Scripture Baseball Cap', 149)">Add to Cart</button>
+                            <button class="btn btn-secondary quick-view" data-product="6">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessory 2 -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x350/C49A6C/FFFFFF?text=Cross+Tote" alt="Cross Tote Bag">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cross Tote Bag</h3>
+                        <p class="product-description">Canvas tote bag with cross design</p>
+                        <div class="price">R199</div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-dropdown">
+                                <option value="">Select Size</option>
+                                <option value="OS">One Size</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-to-cart" onclick="addToCart('Cross Tote Bag', 199)">Add to Cart</button>
+                            <button class="btn btn-secondary quick-view" data-product="7">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dress 2 -->
+                <div class="product-card" data-category="dresses">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x350/3A5A40/FFFFFF?text=Worship+Dress" alt="Worship Midi Dress">
+                        <span class="product-badge">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Worship Midi Dress</h3>
+                        <p class="product-description">Comfortable midi dress for church and events</p>
+                        <div class="price">
+                            <span class="original-price">R399</span>
+                            <span class="sale-price">R349</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-dropdown">
+                                <option value="">Select Size</option>
+                                <option value="XS">X-Small</option>
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn add-to-cart" onclick="addToCart('Worship Midi Dress', 349)">Add to Cart</button>
+                            <button class="btn btn-secondary quick-view" data-product="8">Quick View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Size Guide -->
+        <section class="size-guide">
+            <h2>Size Guide</h2>
+            <div class="guide-content">
+                <div class="guide-section">
+                    <h3>Hoodies & T-Shirts</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>Chest</th>
+                                <th>Length</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>S</td><td>36"</td><td>27"</td></tr>
+                            <tr><td>M</td><td>40"</td><td>28"</td></tr>
+                            <tr><td>L</td><td>44"</td><td>29"</td></tr>
+                            <tr><td>XL</td><td>48"</td><td>30"</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="guide-section">
+                    <h3>Dresses</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>Bust</th>
+                                <th>Waist</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>XS</td><td>32"</td><td>26"</td></tr>
+                            <tr><td>S</td><td>34"</td><td>28"</td></tr>
+                            <tr><td>M</td><td>36"</td><td>30"</td></tr>
+                            <tr><td>L</td><td>38"</td><td>32"</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shopping Cart Sidebar -->
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items">
                 <p>Your cart is empty</p>
             </div>
-            <button class="btn" onclick="clearCart()">Clear Cart</button>
-            <button class="btn" onclick="checkout()">Checkout</button>
-        </section>
+            <div class="cart-total">
+                <strong>Total: R<span id="cart-total-amount">0</span></strong>
+            </div>
+            <div class="cart-actions">
+                <button class="btn" onclick="clearCart()">Clear Cart</button>
+                <button class="btn btn-primary" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p><strong>&copy; 2025, The Chosen Path</strong></p>
+        <p>&copy; 2025 The Chosen Path</p>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about_us.html">About Us</a></li>
-                <li><a href="">Products</a>
+                <li><a href="products.html">Products</a></li>
                 <li><a href="faith_comunity.html">Faith & Community</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
@@ -78,5 +349,45 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Category filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide products based on category
+                    productCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Size selection validation
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const sizeDropdown = this.closest('.product-card').querySelector('.size-dropdown');
+                    if (!sizeDropdown.value) {
+                        e.preventDefault();
+                        alert('Please select a size before adding to cart.');
+                        sizeDropdown.focus();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
