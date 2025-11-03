@@ -1,5 +1,3 @@
-// ===== THE CHOSEN PATH - COMPLETE JAVASCRIPT =====
-
 // Shopping Cart Functionality
 let cart = [];
 
