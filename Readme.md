@@ -101,14 +101,17 @@ it will take 25 days for the project to be completed
 Reference listd, n (2022). Triangle Leaf Cross  Logo Logo Maker | Design.com. [online] Design.com. Available at: https://www.design.com/maker/logo/9d53caa1-fafb-4488-95bf-f6d996550bba/draft/bddff4da-9e5e-46bf-850c-bd5f7ea4b157?savedDraft=True [Accessed 26 Aug. 2025].
 
 d, n (2025a). Bible Reading Plans & Daily Devotionals | YouVersion Bible. [online] www.bible.com. Available at: https://www.bible.com/reading-plans [Accessed 27 Aug. 2025].
+d, n (2022a). CSS Styling Links. [online] www.w3schools.com. Available at: https://www.w3schools.com/css/css_link.asp [Accessed 27 Sep. 2025].
 
 d, n (2025b). Figma. [online] Figma. Available at: https://www.figma.com/design/abSqtz5Lz1atmnqAokE1yd/Untitled?node-id=7-34&t=cKSmAkEfOBP7SqGr-0 [Accessed 26 Aug. 2025].
 
 d, n (2025c). Image Resizer. [online] Imageresizer.com. Available at: https://imageresizer.com/resize/download/68af01234151e78922589c07 [Accessed 27 Aug. 2025].
 
+
 Gilbert, N. (2019). What Is KPI and How to Measure It Effectively: Definition, Examples & Templates. [online] Financesonline.com. Available at: https://financesonline.com/what-is-kpi/ [Accessed 26 Aug. 2025].
 
 gloomaps.com, G. (2018). GlooMaps - Visual Sitemap Tool. [online] Gloomaps.com. Available at: https://www.gloomaps.com/XokxtbYCkd [Accessed 27 Aug. 2025].
+
 
 # 9. CHANGE LOG 
 ## 9.1 STRUCTURE CODE OF HTML 
@@ -123,5 +126,3 @@ Added more products on the product.html as adviced
 Addded more content on the about_us.html page as advised 
 ## 9.3 Update on proposal 
 I have editted my grant chart in order for it not to be vague, I have added very small detail based on what i was adviced 
-## 9.4 GITHUB REPOSITORY 
-https://github.com/ST10496778/WEDE5020_POE
