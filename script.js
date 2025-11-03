@@ -53,31 +53,87 @@ function performSearch() {
 let cart = [];
 
 function addToCart(product, price) {
-    cart.push({ product, price });
+    const sizeDropdown = event.target.closest('.product-card').querySelector('.size-dropdown');
+    const selectedSize = sizeDropdown ? sizeDropdown.value : '';
+    
+    if (!selectedSize) {
+        alert('Please select a size before adding to cart.');
+        return;
+    }
+    
+    cart.push({ 
+        product: product, 
+        price: price,
+        size: selectedSize
+    });
     updateCart();
-    alert(`${product} added to cart!`);
+    showCartNotification(`${product} (Size: ${selectedSize}) added to cart!`);
 }
 
 function updateCart() {
     const cartElement = document.getElementById('cart-items');
+    const totalElement = document.getElementById('cart-total-amount');
+    
     if (!cartElement) return;
 
     if (cart.length === 0) {
-        cartElement.innerHTML = '<p>Cart is empty</p>';
+        cartElement.innerHTML = '<p>Your cart is empty</p>';
+        if (totalElement) totalElement.textContent = '0';
     } else {
         const total = cart.reduce((sum, item) => sum + item.price, 0);
-        cartElement.innerHTML = `
-            <ul>
-                ${cart.map(item => `<li>${item.product} - R${item.price}</li>`).join('')}
-            </ul>
-            <p><strong>Total: R${total}</strong></p>
-        `;
+        cartElement.innerHTML = cart.map(item => `
+            <div class="cart-item">
+                <div>
+                    <strong>${item.product}</strong><br>
+                    <small>Size: ${item.size} | R${item.price}</small>
+                </div>
+                <button onclick="removeFromCart('${item.product}-${item.size}')">×</button>
+            </div>
+        `).join('');
+        
+        if (totalElement) totalElement.textContent = total;
     }
 }
 
-function clearCart() {
-    cart = [];
+function removeFromCart(productId) {
+    cart = cart.filter(item => `${item.product}-${item.size}` !== productId);
     updateCart();
+}
+
+function showCartNotification(message) {
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--header);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        z-index: 1000;
+        animation: slideIn 0.3s ease;
+    `;
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+    
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    const orderDetails = cart.map(item => 
+        `${item.product} (Size: ${item.size}) - R${item.price}`
+    ).join('\n');
+    
+    alert(`Order Summary:\n\n${orderDetails}\n\nTotal: R${total}\n\nProceeding to checkout...`);
+    // In real implementation, redirect to checkout page
 }
 
 // Initialize map
