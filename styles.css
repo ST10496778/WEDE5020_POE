@@ -410,7 +410,318 @@ th {
     max-height: 90vh;
     overflow-y: auto;
 }
+/* About Page Specific Styles */
+.subtitle {
+    text-align: center;
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
 
+/* Hero Section for the about page */
+.hero-section {
+    background: linear-gradient(135deg, var(--header) 0%, var(--footer) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.hero-content h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+/* Story Section */
+.story-section {
+    margin: 4rem 0;
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.story-text h2 {
+    color: var(--header);
+    margin-bottom: 1.5rem;
+}
+
+.story-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+blockquote {
+    background: var(--background);
+    padding: 2rem;
+    border-left: 4px solid var(--accent);
+    margin: 2rem 0;
+    font-style: italic;
+}
+
+cite {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--header);
+}
+
+.journey-timeline {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.journey-timeline li {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--highlight);
+}
+
+.journey-timeline strong {
+    color: var(--header);
+    font-size: 1.1rem;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Mission & Vision */
+.mission-vision {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: var(--background);
+}
+
+.mission-vision h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.mv-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.mv-card h3 {
+    color: var(--header);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Values Section */
+.values-section {
+    margin: 4rem 0;
+}
+
+.values-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--accent);
+}
+
+.value-card h3 {
+    color: var(--header);
+    margin-bottom: 1rem;
+}
+
+/* Team Section */
+.team-section {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: var(--background);
+}
+
+.team-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.team-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.member-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-info h3 {
+    color: var(--header);
+    margin-bottom: 0.5rem;
+}
+
+.member-role {
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* Impact Section */
+.impact-section {
+    margin: 4rem 0;
+}
+
+.impact-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-weight: bold;
+    color: var(--header);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--header) 0%, var(--footer) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 4rem 0;
+}
+
+.cta-content h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--header);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .story-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mv-grid,
+    .values-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-section,
+    .cta-section {
+        padding: 2rem 1rem;
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .filter-buttons {
@@ -445,7 +756,490 @@ th {
         flex-direction: column;
     }
 }
+/* Enhanced Animations */
+.testimony-card,
+.story-card,
+.prayer-card,
+.event-card,
+.join-card,
+.mv-card,
+.value-card,
+.team-member,
+.stat-card {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
 
+.testimony-card:hover,
+.story-card:hover,
+.prayer-card:hover,
+.event-card:hover,
+.join-card:hover,
+.mv-card:hover,
+.value-card:hover,
+.team-member:hover,
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Faith & Community Page Specific Styles */
+.devotion-section {
+    margin: 2rem 0;
+}
+
+.devotion-card {
+    background: linear-gradient(135deg, var(--header) 0%, var(--footer) 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.devotion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.devotion-header h2 {
+    color: white;
+    margin: 0;
+}
+
+.devotion-date {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.verse-of-day h3 {
+    color: var(--highlight);
+    margin-bottom: 1rem;
+}
+
+.verse-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.verse-reference {
+    text-align: right;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.devotion-reflection {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--highlight);
+}
+
+.devotion-reflection h4 {
+    color: var(--highlight);
+    margin-bottom: 1rem;
+}
+
+/* Testimonies Section */
+.testimonies-section {
+    margin: 4rem 0;
+}
+
+.section-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.testimonies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimony-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--accent);
+}
+
+.testimony-content {
+    position: relative;
+}
+
+.testimony-content p {
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.testimony-content p::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--accent);
+    position: absolute;
+    left: -1rem;
+    top: -1rem;
+    opacity: 0.3;
+}
+
+.testimony-author {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.testimony-author strong {
+    color: var(--header);
+    display: block;
+}
+
+.testimony-author span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Stories Section */
+.stories-section {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: var(--background);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.story-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.story-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.story-content {
+    padding: 1.5rem;
+}
+
+.story-content h3 {
+    color: var(--header);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.story-meta {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.story-meta strong {
+    color: var(--header);
+    display: block;
+}
+
+.story-meta span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Prayer Section */
+.prayer-section {
+    margin: 4rem 0;
+}
+
+.prayer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.prayer-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.prayer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.prayer-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--highlight);
+}
+
+.prayer-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.prayer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.prayer-meta span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.pray-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pray-btn:hover {
+    background: var(--highlight);
+}
+
+.prayer-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Events Section */
+.events-section {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: var(--background);
+}
+
+.events-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.event-date {
+    background: var(--header);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 80px;
+}
+
+.event-day {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.event-month {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details h3 {
+    color: var(--header);
+    margin-bottom: 1rem;
+}
+
+.event-meta {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.event-meta span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Gallery Section */
+.gallery-section {
+    margin: 4rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-cta {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: var(--background);
+    border-radius: 10px;
+}
+
+/* Join Community */
+.join-community {
+    margin: 4rem 0;
+    background: linear-gradient(135deg, var(--header) 0%, var(--footer) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.join-content h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.join-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.join-card {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.join-card h3 {
+    color: var(--highlight);
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Enhanced Button Styles */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid currentColor;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .devotion-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .event-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .event-date {
+        align-self: center;
+    }
+    
+    .event-meta {
+        justify-content: center;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .prayer-meta {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonies-grid,
+    .stories-grid,
+    .prayer-grid,
+    .join-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 /* Buttons */
 button, .btn {
     background-color: var(--accent);

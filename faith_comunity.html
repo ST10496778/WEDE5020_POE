@@ -3,104 +3,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>faith an community page </title>
+    <title>Faith & Community - The Chosen Path Christian Clothing</title>
+    <meta name="description" content="Join our faith community. Share testimonies, read daily verses, connect with other Christians, and grow together in faith through The Chosen Path community.">
+    <meta name="keywords" content="christian community, faith testimonies, bible verses, prayer requests, christian youth group, daily devotion">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-      <img src="_images/Screenshot 2025-08-26 092949.png" alt="Chosen Path Logo">
-      <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About us</a></li>
-                <li><a href= "products.html"> Products and services</a></li>
-                <li><a href="">Faith and community</a>
-                <li><a href="contact_us.html">contact us</a></li>
-        
-            </ul>
-         </nav>
-    </header>
-    <main>
-    <section>
-        <h1> Welcome to our faith and community page </h1>
-        <h2> <strong>verse of the day:</strong></h2>
-        <img src="_images/verse of the day image (1).webp" alt="">
-        <p><i><strong>"The LORD himself goes before you and will be with you; he will never leave you nor foresake you. Do not be afraid; do not be discouraged 
-            " - deuteronomy 31:8</strong></i></p>
-        <h1><strong>testemonies </strong></h1>
-        <P><strong><i>"Wearing Chosen Path serves as a daily reminder of my relationship with Christ. It's more than just clothes; it's a declaration of my values-Sarah M"</i></strong></P>
-        <p><strong><i>"I used to find it difficult to combine my faith and fashion, but Chosen Path taught me that I could do both with confidence. Each piece seems to spark a discussion - Daniel K.</i></strong></p>
-        <p><strong><i>  "The objective is what I adore most, not simply the outfits. I feel like I'm a part of something greater knowing that a portion of my purchases go to the ministry- Keisha L.</i></strong></p>   
-        <p><strong><i>"So many positive conversations have been triggered by the verse put on my sweater. Chosen Path is a covert ministry rather than only a brand - James T.</i></strong></p> 
-    </section>
-
-    <section>
-        <h2>Community Stories</h2>
-        <img src="_images/Love of God Hoodie - S.jpeg" alt="Sarah">
-        <p>"I love my hoodie! It reminds me that Jesus's love, and im able to wear my faith with confidence." - Sarah, PTA</p>
-        <img src="_images/Big Church Day Out Christian Festival 2022-lab3LFUAC.jpeg" alt="Thandi">
-        <p>"My bestie and I loves the matching tees for our mission trip." - Thandi, JHB</p>
-        <img src="_images/Christian memes_.jpeg" alt="Thato">
-        <P>"Me and the boys loves these hoodies, definately ate with these"- Thato KZN</P>
-
-    </section>
-        <H2>Instagram posts </H2>
-        <img src="_images/WEDE 01.jpg" alt="">
-        <img src="_images/wede 02.JPG" alt="">
-        <img src="_images/WEDE 03.JPG" alt="">
-        <h2> DON'T FORGET TO TAG US </h2>
-
-    <section>
-        <h2>Upcoming Events</h2>
-        <p>Local Food Drive - October 10th</p>
-        <p>Youth Bible Study Meetup - November 3rd</p>
-        <p>Community Volunteer Day - December 5th</p>
-    </section>
-
-   
-
-    <section>
-        <h2>Join Our Community</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        
-    </section>
-
-    <section>
-      <button>Share Your Story</button>
-      <button>Join Our Youth Community</button>
-      <H2> OR </H2>
-      <h3> Fill in the google form </h3>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCeM-CWZk2OL8XTlCgNY9pP5hTO2nxLkBNBEyA2oITCWJEwg/viewform?embedded=true" width="400" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </section>
-
-</main>
-
-    <footer>
-        <p><strong> © 2025, The Chosen Path Powered by Shopify</strong></p>
-        <p><strong>quick links </strong></p>
+        <div class="logo">The Chosen Path</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About us</a></li>
-                <li><a href= "products.html"> Products and services</a></li>
-                <li><a href="">Faith and community</a>
-                <li><a href="contact_us.html">contact us</a></li>
-                <li><a href="refund policy">Refund policy</a></li>
-                <li><a href="terms and conditions">Terms and Conditions</a></li>
-        
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="">Faith & Community</a>
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
-         </nav>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Faith & Community</h1>
+        <p class="subtitle">Growing Together in Faith, Supporting Each Other in Love</p>
+
+        <!-- Daily Devotion Section -->
+        <section class="devotion-section">
+            <div class="devotion-card">
+                <div class="devotion-header">
+                    <h2>Daily Devotion</h2>
+                    <span class="devotion-date" id="current-date"></span>
+                </div>
+                <div class="verse-of-day">
+                    <h3>Verse of the Day</h3>
+                    <div class="verse-content">
+                        <p class="verse-text">"The LORD himself goes before you and will be with you; he will never leave you nor forsake you. Do not be afraid; do not be discouraged."</p>
+                        <p class="verse-reference">- Deuteronomy 31:8 (NIV)</p>
+                    </div>
+                    <div class="devotion-reflection">
+                        <h4>Today's Reflection</h4>
+                        <p>In moments of uncertainty and fear, remember that God goes before you. He's already in your future, preparing the way and ensuring that you never walk alone. Whatever challenges you face today, walk in the confidence that the Creator of the universe is your personal guide and protector.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonies Section -->
+        <section class="testimonies-section">
+            <h2>Powerful Testimonies</h2>
+            <p class="section-intro">Real stories from our community members about how faith and fashion intersect in their lives</p>
+            
+            <div class="testimonies-grid">
+                <div class="testimony-card">
+                    <div class="testimony-content">
+                        <p>"Wearing Chosen Path serves as a daily reminder of my relationship with Christ. It's more than just clothes; it's a declaration of my values. Last week, my hoodie sparked a conversation that led to me sharing the gospel with a classmate!"</p>
+                        <div class="testimony-author">
+                            <strong>Sarah M.</strong>
+                            <span>University Student, Cape Town</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimony-card">
+                    <div class="testimony-content">
+                        <p>"I used to find it difficult to combine my faith and fashion, but Chosen Path taught me that I could do both with confidence. Each piece seems to spark a discussion about faith in the most unexpected places - from coffee shops to campus."</p>
+                        <div class="testimony-author">
+                            <strong>Daniel K.</strong>
+                            <span>Graphic Designer, Johannesburg</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimony-card">
+                    <div class="testimony-content">
+                        <p>"The mission is what I adore most, not simply the outfits. I feel like I'm a part of something greater knowing that a portion of my purchases go to the ministry. It's fashion with purpose that extends beyond my wardrobe."</p>
+                        <div class="testimony-author">
+                            <strong>Keisha L.</strong>
+                            <span>Teacher, Durban</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimony-card">
+                    <div class="testimony-content">
+                        <p>"So many positive conversations have been triggered by the verse on my sweater. Chosen Path is a covert ministry rather than only a brand. My 'Faith Over Fear' hoodie has become my favorite evangelism tool!"</p>
+                        <div class="testimony-author">
+                            <strong>James T.</strong>
+                            <span>Engineer, Pretoria</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Stories -->
+        <section class="stories-section">
+            <h2>Community Stories</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="_images/wede 02.JPG" alt="Sarah wearing Love of God hoodie">
+                    </div>
+                    <div class="story-content">
+                        <h3>From PTA Meetings to Playground Conversations</h3>
+                        <p>"I love my hoodie! It reminds me that Jesus's love, and I'm able to wear my faith with confidence. At my son's school, other parents often ask about my 'Jesus Paid It All' hoodie, giving me opportunities to share about God's grace in casual, natural settings."</p>
+                        <div class="story-meta">
+                            <strong>Sarah</strong>
+                            <span>PTA Member & Mother</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="_images/2ea3617aa9060ccfa84f68c20c4abb66.jpg" alt="Skylar on a missionary trip">
+                    </div>
+                    <div class="story-content">
+                        <h3>Matching Faith on Mission Trips</h3>
+                        <p>" I love my tees for my mission trip to rural Limpopo. Not only are comfortable, but the local children loved the bright colors and asked about the Bible verses. Our clothing became instant conversation starters for the gospel!"</p>
+                        <div class="story-meta">
+                            <strong>Thandi</strong>
+                            <span>Missionary, Johannesburg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="_images/b78b7e9e1d05071d53dba7241f2f30a9.jpg" alt="Thato and friends in hoodies">
+                    </div>
+                    <div class="story-content">
+                        <h3>Brotherhood in Christ</h3>
+                        <p>"Me and the boys love these hoodies - definitely ate with these! We wear them to our campus Bible study and it's created a sense of unity. Even our non-Christian friends respect our boldness and often join our discussions about faith and purpose."</p>
+                        <div class="story-meta">
+                            <strong>Thato</strong>
+                            <span>Student Leader, KZN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prayer Wall -->
+        <section class="prayer-section">
+            <div class="prayer-container">
+                <div class="prayer-header">
+                    <h2>Prayer Wall</h2>
+                    <p>Share your prayer requests and pray for others in our community</p>
+                </div>
+                <div class="prayer-grid">
+                    <div class="prayer-card">
+                        <div class="prayer-content">
+                            <p>"Praying for strength as I prepare for my final exams. The pressure is overwhelming but I know God is my strength."</p>
+                            <div class="prayer-meta">
+                                <span>Anonymous Student</span>
+                                <button class="pray-btn">I Prayed 🙏</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prayer-card">
+                        <div class="prayer-content">
+                            <p>"My family is going through financial difficulties. Praying for provision and wisdom in managing our resources."</p>
+                            <div class="prayer-meta">
+                                <span>Brother in Christ</span>
+                                <button class="pray-btn">I Prayed 🙏</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prayer-card">
+                        <div class="prayer-content">
+                            <p>"Asking for prayers for my friend who is struggling with doubt. May God reveal Himself to her in powerful ways."</p>
+                            <div class="prayer-meta">
+                                <span>Sister Faith</span>
+                                <button class="pray-btn">I Prayed 🙏</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="prayer-form">
+                    <h3>Add Your Prayer Request</h3>
+                    <form id="prayer-request-form">
+                        <div class="form-group">
+                            <label for="prayer-name">Your Name (Optional)</label>
+                            <input type="text" id="prayer-name" name="name" placeholder="You can remain anonymous">
+                        </div>
+                        <div class="form-group">
+                            <label for="prayer-request">Prayer Request *</label>
+                            <textarea id="prayer-request" name="prayer" required placeholder="Share your prayer request..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Prayer Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="events-section">
+            <h2>Upcoming Events</h2>
+            <div class="events-timeline">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-day">10</span>
+                        <span class="event-month">OCT</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Local Food Drive & Community Outreach</h3>
+                        <p>Join us as we serve our local community through a food drive and outreach program. We'll be distributing food parcels and sharing God's love with those in need.</p>
+                        <div class="event-meta">
+                            <span>📍 Johannesburg Central</span>
+                            <span>🕒 9:00 AM - 2:00 PM</span>
+                        </div>
+                        <button class="btn btn-secondary">RSVP Now</button>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-day">03</span>
+                        <span class="event-month">NOV</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Youth Bible Study Meetup</h3>
+                        <p>Monthly youth Bible study focusing on relevant topics for young Christians. This month: "Navigating Social Media as a Christian." Bring a friend!</p>
+                        <div class="event-meta">
+                            <span>📍 Online & Campus Hub</span>
+                            <span>🕒 6:00 PM - 8:00 PM</span>
+                        </div>
+                        <button class="btn btn-secondary">RSVP Now</button>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-day">05</span>
+                        <span class="event-month">DEC</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Community Volunteer Day</h3>
+                        <p>Annual community service day where we partner with local organizations to make a difference. Various activities available for all ages and abilities.</p>
+                        <div class="event-meta">
+                            <span>📍 Various Locations</span>
+                            <span>🕒 8:00 AM - 1:00 PM</span>
+                        </div>
+                        <button class="btn btn-secondary">RSVP Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Gallery -->
+        <section class="gallery-section">
+            <h2>Community Gallery</h2>
+            <p class="section-intro">See how our community members are wearing their faith and making a difference</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="_images/WEDE 01.jpg" alt="Community event photo 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="_images/23d039f0bcf0683c9fd53423005f1a8c.jpg" alt="Community event photo 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="_images/80f0045a8d14e9eb8adb439223823193.jpg" alt="Community event photo 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="_images/fe01fa2a6b2e0b8fc7b239d1ae12b999.jpg" alt="Community event photo 4">
+                </div>
+            </div>
+            <div class="gallery-cta">
+                <h3>Share Your Photos With Us!</h3>
+                <p>Tag <strong>@chosenpath_sa</strong> on Instagram to be featured in our gallery</p>
+            </div>
+        </section>
+
+        <!-- Join Community -->
+        <section class="join-community">
+            <div class="join-content">
+                <h2>Join Our Growing Community</h2>
+                <p>Connect with other young Christians, grow in your faith, and be part of something bigger than yourself.</p>
+                <div class="join-options">
+                    <div class="join-card">
+                        <h3>Email Newsletter</h3>
+                        <p>Get weekly devotionals, event updates, and community news</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                    
+                    <div class="join-card">
+                        <h3>WhatsApp Group</h3>
+                        <p>Join our daily prayer and encouragement group</p>
+                        <button class="btn btn-secondary" onclick="joinWhatsApp()">Join Group</button>
+                    </div>
+                    
+                    <div class="join-card">
+                        <h3>Share Your Story</h3>
+                        <p>Inspire others by sharing how God is working in your life</p>
+                        <button class="btn btn-secondary" onclick="shareStory()">Share Testimony</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Chosen Path</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="">Faith & Community</a>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </footer>
 
+    <script src="script.js"></script>
+    <script>
+        // Set current date
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', { 
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
 
+        // Prayer button functionality
+        document.querySelectorAll('.pray-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const currentText = this.textContent;
+                if (currentText === 'I Prayed 🙏') {
+                    this.textContent = 'Prayed ✅';
+                    this.style.background = 'var(--highlight)';
+                    this.disabled = true;
+                    
+                    // Show confirmation
+                    const confirmation = document.createElement('div');
+                    confirmation.textContent = 'Thank you for praying!';
+                    confirmation.style.cssText = `
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: var(--header);
+                        color: white;
+                        padding: 1rem 2rem;
+                        border-radius: 5px;
+                        z-index: 1000;
+                    `;
+                    document.body.appendChild(confirmation);
+                    setTimeout(() => confirmation.remove(), 3000);
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('prayer-request-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for sharing your prayer request. Our community will be praying for you!');
+            this.reset();
+        });
+
+        function joinWhatsApp() {
+            alert('You will be redirected to join our WhatsApp community group. Welcome!');
+        }
+
+        function shareStory() {
+            alert('Thank you for wanting to share your story! You will be redirected to our testimony submission form.');
+        }
+    </script>
 </body>
 </html>
-
-
-
-
-
